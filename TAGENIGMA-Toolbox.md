@@ -16,7 +16,7 @@ Package contents are targeted towards programmers wanting to extend the Unity ID
 Compatibility
 -------------
 
-This project is targeted for Unity 3.3 or better.
+This project is targeted for Unity 3.5.7 or better.
 
 
 What is in the toolbox?
@@ -25,7 +25,9 @@ What is in the toolbox?
 Extensions! Extensions can be accessed via the menu items.
 
 
-**"Window/Open TAGENIGMA Toolbox"** - Opens a configuration panel for the toolbox. Here you can set the path to the unity editor.
+**"Window/Open TAGENIGMA Toolbox"** - Opens a configuration panel for the toolbox. Here you can set an alternate path
+
+to the unity editor and engine DLL references.
 
 On Windows, this location should be the folder containing the Unity Editor application, so that the Unity libraries can be
 
