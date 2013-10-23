@@ -4,7 +4,7 @@ Tim Graupmann
 
 **Audience**
 
-Package contents are targeted towards artists and programmers wanting to find performance bottlenecks in their game or application.
+Package contents are targeted towards artists and programmers wanting to find performance bottlenecks in their game or application as it runs on the target device.
 
 **Compatibility**
 
