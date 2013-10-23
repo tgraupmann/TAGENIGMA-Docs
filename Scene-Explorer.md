@@ -8,7 +8,7 @@ Package contents are targeted towards artists and programmers wanting to find pe
 
 **Compatibility**
 
-This project is targeted for Unity 3.5.7 or better. The project was tested on Windows/Mac/Android/OUYA.
+This project is targeted for Unity 4.2.2 or better. The project was tested on Windows/Mac/Android/OUYA.
 
 **Package**
 
