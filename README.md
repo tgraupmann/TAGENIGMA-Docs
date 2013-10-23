@@ -3,7 +3,7 @@ TAGENIGMA-Docs
 
 Documentation for TAGENIGMA LLC Products
 
-** Unity Asset Store Products
+**Unity Asset Store Products**
 
 * [Ecosystem-Generator](Ecosystem-Generator.md)
 
