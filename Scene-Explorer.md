@@ -44,11 +44,17 @@ Visit the <a target=_blank href="http://www.youtube.com/playlist?list=PL4mjXeDqR
 
 <img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/816995394.png?1382509589"/>
 
+<img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/816995518.png?1382509644"/>
+
 **Host**
 
 Open the Scene Explorer Panel from the Window menu and start a Host connection by clicking Create Host on the Host tab. Choose a TCP port that is not already in use. Clients  will automatically connect to the Host.
 Select a connected Client and click on Request Scene. This will send a request to the client to send the scene hierarchy.
 With the scene hierarchy displayed, you can check or uncheck GameObjects in the scene while measuring FPS performance to find and hunt for bottlenecks. The TreeView also supports a search feature to assist hunting for GameObjects by name.
+
+<img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/816995604.png?1382509681"/>
+
+<img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/816995658.png?1382509709"/>
 
 **Change Log**
 
