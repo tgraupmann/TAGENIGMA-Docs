@@ -1,6 +1,6 @@
-**Author**
+**Asset Store**
 
-Tim Graupmann 
+<a target=_blank href="https://www.assetstore.unity3d.com/#/content/7984">[Scene Explorer]</a> is available in the Unity Asset Store.
 
 **Audience**
 
@@ -66,6 +66,8 @@ With the scene hierarchy displayed, you can check or uncheck GameObjects in the 
 
 1.3 - Includes full source. Upgraded to Unity 4! The panel is now vertically collapsable.
 
-Q & A
+**Author**
+
+Tim Graupmann 
 
 You can send comments/questions to tim@tagenigma.com and any feedback you send will turn into new features.
