@@ -16,7 +16,7 @@ Scene Explorer includes Client/Server networking which allows the editor extensi
 
 **Playlist**
 
-Visit the <a target=_blank href="http://www.youtube.com/playlist?list=PL4mjXeDqRBMS5dFZvqV8NDkOz5ZXXTRiq&feature=view_all">[video playlist]</a> for feature overviews of Scene Explorer. https://www.youtube.com/playlist?list=PL4mjXeDqRBMS5dFZvqV8NDkOz5ZXXTRiq
+Visit the <a target=_blank href="http://www.youtube.com/playlist?list=PL4mjXeDqRBMS5dFZvqV8NDkOz5ZXXTRiq&feature=view_all">[video playlist]</a> for feature overviews of Scene Explorer.
 
 **Menu Items**
 
