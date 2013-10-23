@@ -42,8 +42,9 @@ Visit the <a target=_blank href="http://www.youtube.com/playlist?list=PL4mjXeDqR
 * Assets\SceneExplorer\Scenes1
 * This scene is setup for a client and includes an example scene with content that can be remotely de/activated. The SceneExplorerClient GameObject has an attached script that establishes the client connection. Enter the Host (IP if available) and Port of the Host. You can hit play to run the Unity editor as a client and/or publish to a device which will connect to the Host on Start. The example also includes a sample FPS counter on the SceneExplorerFPS GameObject.
 
-**Host**
+<img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/816995394.png?1382509589"/>
 
+**Host**
 
 Open the Scene Explorer Panel from the Window menu and start a Host connection by clicking Create Host on the Host tab. Choose a TCP port that is not already in use. Clients  will automatically connect to the Host.
 Select a connected Client and click on Request Scene. This will send a request to the client to send the scene hierarchy.
