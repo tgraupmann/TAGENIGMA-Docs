@@ -58,9 +58,13 @@ With the scene hierarchy displayed, you can check or uncheck GameObjects in the 
 
 **Change Log**
 
-1.0 – Initial submission of project
+1.0 – Initial submission of project.
 
 1.1 – Added inspection of components, fields, and properties, and remote editing for Vector position, rotation, and scale. Split the panel into 3 sections for scene, components, and fields/properties.
+
+1.2 - Added editing component fields.
+
+1.3 - Includes full source. Upgraded to Unity 4! The panel is now vertically collapsable.
 
 Q & A
 
