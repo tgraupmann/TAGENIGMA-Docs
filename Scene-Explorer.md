@@ -16,7 +16,7 @@ Scene Explorer includes Client/Server networking which allows the editor extensi
 
 **Playlist**
 
-Visit the YouTube playlist for feature overviews of Scene Explorer. https://www.youtube.com/playlist?list=PL4mjXeDqRBMS5dFZvqV8NDkOz5ZXXTRiq
+Visit the <a target=_blank href="http://www.youtube.com/playlist?list=PL4mjXeDqRBMS5dFZvqV8NDkOz5ZXXTRiq&feature=view_all">[video playlist]</a> for feature overviews of Scene Explorer. https://www.youtube.com/playlist?list=PL4mjXeDqRBMS5dFZvqV8NDkOz5ZXXTRiq
 
 **Menu Items**
 
@@ -58,5 +58,3 @@ With the scene hierarchy displayed, you can check or uncheck GameObjects in the 
 Q & A
 
 You can send comments/questions to tim@tagenigma.com and any feedback you send will turn into new features.
-
-Stay tuned in the <a target=_blank href="http://www.youtube.com/playlist?list=PL4mjXeDqRBMS5dFZvqV8NDkOz5ZXXTRiq&feature=view_all">[video playlist]</a>. Normally you’ll see update videos that are more recent than what’s in the asset store. If you send your invoice number for “Scene Explorer” to tim@tagenigma.com you can get the most recent updates before it appears in the store.
