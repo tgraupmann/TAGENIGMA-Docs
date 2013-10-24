@@ -45,6 +45,14 @@ If you are a C++ or LUA developer, those are included with many other common for
 
 <img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/817181019.png?1382592307"/>
 
+The Toolbox Panel can also be expanded. Here you can specify an alternate location to
+
+change the path to the Unity DLLs. This is useful if you are running a Virtual Machine
+
+and you want to use an alternate path than the host.
+
+<img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/817192668.png?1382598400"/>
+
 Extensions! Extensions can be accessed via the menu items.
 
 
