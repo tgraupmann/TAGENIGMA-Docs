@@ -1,11 +1,6 @@
-TAGENIGMA Toolbox
---------------------------------------
+**Asset Store**
 
-
-Authors
--------
-Tim Graupmann
-
+<a target=_blank href="https://www.assetstore.unity3d.com/#/content/1867">[TAGENIGMA Toolbox]</a> is available in the Unity Asset Store.
 
 Audience
 --------
