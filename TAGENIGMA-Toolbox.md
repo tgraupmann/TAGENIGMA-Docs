@@ -11,7 +11,7 @@ Package contents are targeted towards programmers wanting to extend the Unity ID
 Compatibility
 -------------
 
-This project is targeted for Unity 3.5.7 or better.
+This project is targeted for Unity 4.2.2 or better.
 
 
 What is in the toolbox?
