@@ -17,13 +17,31 @@ This project is targeted for Unity 4.2.2 or better.
 What is in the toolbox?
 ----------------------------
 
+The Toolbox Editor panel can be collapsed to dock nicely in your view.
+
 <img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/817180615.png?1382592114"/>
+
+How many times have you seen a line-ending warning. Quickly pick a side and keep the
+
+files synced in that format. The post processor can enforce your line ending format
+
+if you decide to turn on automatic processing.
 
 <img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/817180704.png?1382592170"/>
 
+Quickly choose to export with a specific Visual Studio version. And it works on the Mac!
+
 <img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/817180801.png?1382592215"/>
 
+Control when Visual Studio opens.
+
 <img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/817180926.png?1382592276"/>
+
+Handle more formats to include in your project than normal. If you are an Android developer, it's
+
+nice to have your C#, JavaScript, and Java accessible from within your Visual Studio project.
+
+If you are a C++ or LUA developer, those are included with many other common formats.
 
 <img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/817181019.png?1382592307"/>
 
