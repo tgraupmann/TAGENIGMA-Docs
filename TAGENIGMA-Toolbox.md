@@ -21,6 +21,8 @@ What is in the toolbox?
 
 <img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/817180704.png?1382592170"/>
 
+<img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/817180801.png?1382592215"/>
+
 Extensions! Extensions can be accessed via the menu items.
 
 
