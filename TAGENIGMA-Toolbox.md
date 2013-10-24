@@ -17,6 +17,9 @@ This project is targeted for Unity 4.2.2 or better.
 What is in the toolbox?
 ----------------------------
 
+<img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/817180615.png?1382592114"/>
+
+
 Extensions! Extensions can be accessed via the menu items.
 
 
