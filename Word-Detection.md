@@ -5,6 +5,8 @@ Word Detection
 Quick Links
 -----------
 
+<a target=_blank href="https://www.assetstore.unity3d.com/#/content/4518">[Word Detection]</a> is available in the Unity Asset Store.
+
 <a target=_blank href="http://forum.unity3d.com/threads/152178-Word-Detection-Verbal-Commands">[Unity Showcase Thread]</a>
 
 
