@@ -5,7 +5,7 @@ Network Distributed Baking
 
 <a target=_blank href="https://www.assetstore.unity3d.com/#/content/4305">[Network Distributed Baking]</a> is available in the Unity Asset Store.
 
-* <a target=_blank href="http://forum.unity3d.com/threads/149836-Network-Distributed-Baking?p=1026463">[Unity Showcase Thread]</a>
+<a target=_blank href="http://forum.unity3d.com/threads/149836-Network-Distributed-Baking?p=1026463">[Unity Showcase Thread]</a>
 
 Audience
 --------
