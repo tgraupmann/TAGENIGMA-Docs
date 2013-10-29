@@ -1,6 +1,8 @@
-**Asset Store**
+**Quick Links**
 
 <a target=_blank href="https://www.assetstore.unity3d.com/#/content/1867">[TAGENIGMA Toolbox]</a> is available in the Unity Asset Store.
+
+<a target=_blank href="http://forum.unity3d.com/threads/101485-Sync-VS2010-From-Mac">[Unity Showcase Thread]</a>
 
 Audience
 --------
