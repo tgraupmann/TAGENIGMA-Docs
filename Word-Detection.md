@@ -1,6 +1,7 @@
 Word Detection
 --------------
 
+<img src="http://theylovegames.com/WordDetection.jpg"/>
 
 Quick Links
 -----------
