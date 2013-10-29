@@ -1,6 +1,8 @@
-**Asset Store**
+**Quick links**
 
 <a target=_blank href="https://www.assetstore.unity3d.com/#/content/7984">[Scene Explorer]</a> is available in the Unity Asset Store.
+
+<a target=_blank href="http://forum.unity3d.com/threads/179306-Scene-Explorer-Remote-scene-editing">[Unity Showcase Thread]</a>
 
 **Audience**
 
