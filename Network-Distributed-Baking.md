@@ -3,6 +3,8 @@ Network Distributed Baking
 
 **Quick Links**
 
+<a target=_blank href="https://www.assetstore.unity3d.com/#/content/4305">[Network Distributed Baking]</a> is available in the Unity Asset Store.
+
 * <a target=_blank href="http://forum.unity3d.com/threads/149836-Network-Distributed-Baking?p=1026463">[Unity Showcase Thread]</a>
 
 Audience
@@ -101,6 +103,4 @@ Change Log
 Q & A
 -----
 
-You can send comments/questions to support@theylovegames.com where your feedback will help us create new tutorials and features
-
-in order to improve the product.
+You can send comments/questions to support@theylovegames.com where your feedback will help us create new tutorials and features in order to improve the product.
