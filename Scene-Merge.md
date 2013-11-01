@@ -19,7 +19,7 @@ Anyone looking to have a better experience merging scenes.
 Compatibility
 -------------
 
-This project is targeted for Unity 3.5.0 or better.
+This project is targeted for Unity 4.2.2 or better.
 
 This product expects that you have turned on "Force Text" as your asset serialization mode.
 
