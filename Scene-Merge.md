@@ -90,10 +90,11 @@ Change Log
 
 1.4 - Added post processors for automatic scene and prefab sorting
 
+1.5 - Moved documentation online, added quick object comparison
 
-Q & A
------
 
-You can send comments/questions to support@theylovegames.com where your feedback will help us create new tutorials and features
+**Author**
 
-in order to improve the product.
+Tim Graupmann 
+
+You can send comments/questions to tim@tagenigma.com and any feedback you send will turn into new features.
