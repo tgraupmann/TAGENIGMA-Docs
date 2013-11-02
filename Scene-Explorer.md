@@ -72,6 +72,8 @@ With the scene hierarchy displayed, you can check or uncheck GameObjects in the 
 
 1.3 - Includes full source. Upgraded to Unity 4! The panel is now vertically collapsable.
 
+1.4 - Changed description to say documentation is available online versus moved online.
+
 **Author**
 
 Tim Graupmann 
