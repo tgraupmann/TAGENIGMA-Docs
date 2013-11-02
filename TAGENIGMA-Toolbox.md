@@ -122,6 +122,12 @@ public class YourClassName : MonoBehaviour
 ```
 
 
+Change Log
+----------
+
+1.22 - Changed description to say documentation is available online versus moved online.
+
+
 Q & A
 -----
 
