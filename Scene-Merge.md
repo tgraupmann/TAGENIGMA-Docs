@@ -92,6 +92,7 @@ Change Log
 
 1.5 - Moved documentation online, added quick object comparison
 
+1.6 - Changed description to say documentation is available online versus moved online.
 
 **Author**
 
