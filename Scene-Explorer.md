@@ -74,6 +74,8 @@ With the scene hierarchy displayed, you can check or uncheck GameObjects in the 
 
 1.4 - Changed description to say documentation is available online versus moved online.
 
+1.5 - Fixed warnings. Removed an extra UnityVS folder.
+
 **Author**
 
 Tim Graupmann 
