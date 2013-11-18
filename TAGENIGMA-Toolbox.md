@@ -17,7 +17,7 @@ Package contents are targeted towards programmers wanting to extend the Unity ID
 Compatibility
 -------------
 
-This project is targeted for Unity 4.2.2 or better.
+This project is targeted for Unity 4.3 or better.
 
 
 What is in the toolbox?
@@ -126,6 +126,8 @@ Change Log
 ----------
 
 1.22 - Changed description to say documentation is available online versus moved online.
+
+1.23 - Upgraded to Unity 4.3
 
 
 Q & A
