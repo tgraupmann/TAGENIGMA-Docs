@@ -80,6 +80,8 @@ export Visual Studio projects. You can browse or manually enter the path to the 
 
 virtual machine path. In most cases the default location should be adequate.
 
+<img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/822791526.png?1384896123"/>
+
 **"Assets/TAGENIGMA Toolbox/Asset Store"** - Opens the Asset Store page in the browser.
 
 **"Assets/TAGENIGMA Toolbox/Open Toolbox"** - Another quick link to open the configuration panel.
