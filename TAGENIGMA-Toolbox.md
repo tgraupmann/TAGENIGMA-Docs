@@ -143,6 +143,10 @@ to your MonoBehaviour script and it will be detected and exported. The example f
 public class YourClassName : MonoBehaviour
 ```
 
+**"Assets/TAGENIGMA Toolbox/Set Preprocessor Defines"** - This will automatically detect any registered symbols and set the preprocessor defines in the Unity editor. The defined symbols are displayed in the configuration panel.
+
+http://docs.unity3d.com/Documentation/Manual/PlatformDependentCompilation.html
+
 
 Change Log
 ----------
