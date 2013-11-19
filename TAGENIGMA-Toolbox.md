@@ -66,7 +66,7 @@ needs an alternate path than the host. I.e. Running Mac with a Windows guest.
 Extensions! Extensions can be accessed via the menu items.
 
 
-**"Window/Open TAGENIGMA Toolbox"** - Opens a configuration panel for the toolbox. Here you can set an alternate path
+**"Window/TAGENIGMA/Open TAGENIGMA Toolbox"** - Opens a configuration panel for the toolbox. Here you can set an alternate path
 
 to the unity editor and engine DLL references.
 
