@@ -94,6 +94,8 @@ Change Log
 
 1.6 - Changed description to say documentation is available online versus moved online.
 
+1.7 - Added GIT support for diffs. Made SVN/GIT client paths configurable. Save editor state for post processor and paths.
+
 **Author**
 
 Tim Graupmann 
