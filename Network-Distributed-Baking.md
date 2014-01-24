@@ -99,6 +99,9 @@ Change Log
 
 0.4 - Added compression when sending objects and stability.
 
+0.5 - Alpha version. Speed up ping times. Auto save scene and project when sending files and requesting bake operations.
+
+0.6 - Added path empty string checking. Added version number to panel. Refactoring. Ensure lightmap textures import with lightmap texture type.
 
 Q & A
 -----
