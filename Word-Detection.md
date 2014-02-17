@@ -91,6 +91,9 @@ Example Scene 5 - Verbal Control, words can control the transformation of a cube
 Example Scene 6 - Push to talk in order to issue commands
 
 
+Example Scene 7 - Mechanim example uses Word Detection to change states
+
+
 Tutorials
 ---------
 
@@ -121,6 +124,10 @@ Change Log
 1.4 - Added example 6
 
 1.5 - Added support for profile loading and saving. Added an example toggle for "Use Plotter" which disables example texture rendering when off.
+
+1.6 - Added push to talk example
+
+1.7 - Added mechanim example
 
 Q & A
 -----
