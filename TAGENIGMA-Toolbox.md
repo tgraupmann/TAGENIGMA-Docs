@@ -155,7 +155,11 @@ Change Log
 
 1.22 - Changed description to say documentation is available online versus moved online.
 
-1.23 - Upgraded to Unity 4.3
+1.23 - Made compatible with Unity 4.3
+
+1.24 - Added support for Visual Studio 2013
+
+1.25 - Added support for Mac .app contents paths to UnityEditor.dll and UnityEngine.dll
 
 
 Q & A
