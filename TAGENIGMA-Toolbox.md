@@ -161,6 +161,7 @@ Change Log
 
 1.25 - Added support for Mac .app contents paths to UnityEditor.dll and UnityEngine.dll
 
+1.26 - Added support for .c, .cc, and .hpp extensions
 
 Q & A
 -----
