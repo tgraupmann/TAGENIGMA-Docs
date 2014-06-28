@@ -94,6 +94,15 @@ Example Scene 6 - Push to talk in order to issue commands
 Example Scene 7 - Mechanim example uses Word Detection to change states
 
 
+Example Scene 8 - Adds saving and loading profiles to file with a dialog
+
+
+Example Scene 9 - Adds word navigation using word sets
+
+
+Example Scene 10 - Adds verbal commands that control facial expressions
+
+
 Tutorials
 ---------
 
@@ -128,6 +137,8 @@ Change Log
 1.6 - Added push to talk example
 
 1.7 - Added mechanim example
+
+1.8 - Upgraded to Unity 4.5.1. Added file save dialog for word profiles, word set navigation, and the control of facial expressions with word commands
 
 Q & A
 -----
