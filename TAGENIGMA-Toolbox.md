@@ -8,6 +8,8 @@ TAGENIGMA Toolbox
 
 <a target=_blank href="http://forum.unity3d.com/threads/101485-Sync-VS2010-From-Mac">[Unity Showcase Thread]</a>
 
+<a target=_blank href="https://www.youtube.com/playlist?list=PL4mjXeDqRBMTILAXPgkoRpwAPl3QDrMl6">[Video Playlist]</a>
+
 Audience
 --------
 
