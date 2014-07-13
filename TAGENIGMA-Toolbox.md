@@ -163,6 +163,8 @@ Change Log
 
 1.26 - Added support for .c, .cc, and .hpp extensions
 
+1.27 - Added support for toggling define symbols
+
 Q & A
 -----
 
