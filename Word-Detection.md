@@ -176,6 +176,4 @@ Change Log
 Q & A
 -----
 
-You can send comments/questions to support@theylovegames.com where your feedback will help us create new tutorials and features
-
-in order to improve the product.
+You can send comments/questions to support@theylovegames.com where your feedback will help us create new tutorials and features in order to improve the product.
