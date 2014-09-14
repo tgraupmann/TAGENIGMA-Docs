@@ -40,6 +40,10 @@ Hardware testing
 
 (Android)
 
+OUYA
+
+Nexus 10
+
 Samsung Galaxy S III
 
 (iOS)
@@ -103,6 +107,27 @@ Example Scene 9 - Adds word navigation using word sets
 Example Scene 10 - Adds verbal commands that control facial expressions
 
 
+Example Scene 11 - Verbal commands control another hi-resolution head
+
+
+Example Scene 12 - Verbal command control a low-resolution talking head
+
+
+Example Scene 13 - Verbal commands control another low-res talking head
+
+
+Example Scene 14 - Verbal commands control blend shapes
+
+
+Example Scene 15 - Verbal commands control emotional states
+
+
+Example Scene 16 - Verbal commands control goat media clip playback
+
+
+Example Scene 17 - Verbal commands drive Character Controller input
+
+
 Tutorials
 ---------
 
@@ -139,6 +164,11 @@ Change Log
 1.7 - Added mechanim example
 
 1.8 - Upgraded to Unity 4.5.1. Added file save dialog for word profiles, word set navigation, and the control of facial expressions with word commands
+
+1.9 - Added goat media clips with playback ties with word detection
+
+1.10 - Word Detection can now drive a Character Controller
+
 
 Q & A
 -----
