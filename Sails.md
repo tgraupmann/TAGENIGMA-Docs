@@ -12,25 +12,27 @@ Follow the [Getting Started](https://github.com/balderdashy/sails-docs/blob/mast
  </tr>
 </table>
 
-## How to Setup `Sails.js` on `Cloud 9`.
+## Setup `Cloud 9` Account
 
 * Register a free account on [Cloud 9](https://c9.io).
 
 * On the `Cloud 9` dashboard, click `CREATE NEW WORKSPACE` and select `Create a New Workspace`.
 
-![New Terminal](Sails/image-4.png)
+![Create Workspace](Sails/image-4.png)
 
 * Name your `workspace`. Select `Hosted` hosting with a `Node.js` service. Click the `CREATE` button. The create process runs for about 5 minutes... 
 
-![New Terminal](Sails/image-5.png)
+![Create Node.js](Sails/image-5.png)
+
+## How to Setup `Sails.js` on `Cloud 9`.
 
 * In the `dashboard` click on the newly created `workspace` and click `START EDITING`.
 
-![New Terminal](Sails/image-6.png)
+![Edit Workspace](Sails/image-6.png)
 
 * Open a new `Terminal Window`.
 
-![New Terminal](Sails/image-1.png)
+![Terminal Window](Sails/image-1.png)
 
 * Install `Sails.js` via the `Terminal Window`. The `NPM` package manager will install sails globally with the `-g` option.
 
@@ -46,7 +48,7 @@ sudo npm -g install sails
 sails new sailsDemoProject
 ```
 
-![Install Sails](Sails/image-7.png)
+![Create Project](Sails/image-7.png)
 
 * Change to the project folder and start the `Sails.js` server.
 
@@ -55,16 +57,47 @@ cd sailsDemoProject/
 sails lift
 ```
 
-![Install Sails](Sails/image-8.png)
+![Run Project](Sails/image-8.png)
 
 * Find `server.js` within your project, right-click and choose `Run`.
 
-![Install Sails](Sails/image-9.png)
+![Preview Project](Sails/image-9.png)
 
 * Running `server.js` will display the link to browse the project.
 
-![Install Sails](Sails/image-11.png)
+![Preview Browser](Sails/image-11.png)
 
 * Entering the link in the preview browser will display the project.
 
-![Install Sails](Sails/image-10.png)
+![Display Project](Sails/image-10.png)
+
+## Create Leaderboards Demo
+
+Any game that has scoring will likely have a leaderboards feature. Here's how you can make a leaderboard in `Sails.js`.
+
+* In the terminal, create a demo project. Switch to the project directory and restart `Sails.js`.
+
+```
+sails new leaderboardDemo
+cd leaderboardDemo
+sails lift
+```
+
+![Create demo](Sails/image-12.png)
+
+* Preview the page to confirm `Sails.js` has loaded.
+
+![Preview leaderboard](Sails/image-14.png)
+
+* In the terminal create a `leaderboard` api model and restart `Sails.js`.
+
+```
+sails generate api leaderboard
+sails lift
+```
+
+![Generate Leaderboard](Sails/image-13.png)
+
+* Preview the leaderboard API page to verify the API has been created. The result set will be empty at first.
+
+![Leaderboard API](Sails/image-15.png)
