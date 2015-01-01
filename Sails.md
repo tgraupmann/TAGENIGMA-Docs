@@ -98,6 +98,10 @@ sails lift
 
 ![Generate Leaderboard](Sails/image-13.png)
 
+* The `Leaderboard.js` API model will be generated.
+
+![Generate Leaderboard](Sails/image-16.png)
+
 * Preview the leaderboard API page to verify the API has been created. The result set will be empty at first.
 
 ![Leaderboard API](Sails/image-15.png)
