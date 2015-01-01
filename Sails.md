@@ -121,3 +121,19 @@ https://sailsdemo-tgraupmann.c9.io/leaderboard
 ```
 
 ![Leaderboard API](Sails/image-18.png)
+
+* Limit list to `10` records and sort by a descending `Score`.
+
+```
+https://sailsdemo-tgraupmann.c9.io/leaderboard?limit=10&sort=score%20DESC
+```
+
+![Leaderboard API](Sails/image-19.png)
+
+* If two people have the same score, sort by id.
+
+```
+https://sailsdemo-tgraupmann.c9.io/leaderboard?limit=10&sort=score%20DESC%20id%20ASC
+```
+
+![Leaderboard API](Sails/image-20.png)
