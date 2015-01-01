@@ -105,3 +105,19 @@ sails lift
 * Preview the leaderboard API page to verify the API has been created. The result set will be empty at first.
 
 ![Leaderboard API](Sails/image-15.png)
+
+* Add records to the Leaderboard data by hitting the API create page.
+
+```
+https://sailsdemo-tgraupmann.c9.io/leaderboard/create?name=timg&score=10
+```
+
+![Leaderboard API](Sails/image-17.png)
+
+* The leaderboard page will show data has been added.
+
+```
+https://sailsdemo-tgraupmann.c9.io/leaderboard
+```
+
+![Leaderboard API](Sails/image-18.png)
