@@ -106,7 +106,7 @@ sails lift
 
 ![Leaderboard API](Sails/image-15.png)
 
-* Add records to the Leaderboard data by hitting the API create page.
+* Add records to the leaderboard data by hitting the API create page. More details are available on the page [Create a record](http://sailsjs.org/#/documentation/reference/blueprint-api/Create.html) in the `Blueprint API`.
 
 ```
 https://sailsdemo-tgraupmann.c9.io/leaderboard/create?name=timg&score=10
@@ -137,3 +137,19 @@ https://sailsdemo-tgraupmann.c9.io/leaderboard?limit=10&sort=score%20DESC%20id%2
 ```
 
 ![Leaderboard API](Sails/image-20.png)
+
+* If two people have the same score, sort by `createdAt`.
+
+```
+https://sailsdemo-tgraupmann.c9.io/leaderboard?limit=10&sort=score%20DESC%20createdAt%20ASC
+```
+
+![Leaderboard API](Sails/image-21.png)
+
+* Destroy will remove a record using the "id" field. More details are available on the page [Destroy a record](http://sailsjs.org/#/documentation/reference/blueprint-api/Destroy.html) in the `Blueprint API`.
+
+```
+https://sailsdemo-tgraupmann.c9.io/leaderboard/destroy?id=1
+```
+
+![Leaderboard API](Sails/image-22.png)
