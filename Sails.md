@@ -153,3 +153,11 @@ https://sailsdemo-tgraupmann.c9.io/leaderboard/destroy?id=1
 ```
 
 ![Leaderboard API](Sails/image-22.png)
+
+## Accessing Leaderboard Data from Unity
+
+The [UnitySailsLeaderboard](https://github.com/tgraupmann/tagenigma-examples/tree/master/UnitySailsLeaderboard) example reads the `Sails.js` leaderboard data to display using the new Unity 4.6 UI.
+
+* Be sure to inspect the `LeaderboardManager` and in the inspector set the `Cloud9` fields for your `Username` and `Project Name`. 
+
+![Leaderboard API](Sails/image-23.png)
