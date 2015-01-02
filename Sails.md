@@ -174,3 +174,70 @@ The [UnitySailsLeaderboard](https://github.com/tgraupmann/tagenigma-examples/tre
 * Be sure to inspect the `LeaderboardManager` and in the inspector set the `Cloud9` fields for your `Username` and `Project Name`. 
 
 ![Leaderboard API](Sails/image-23.png)
+
+### Creating Data Over WWW
+
+```
+		public IEnumerator createData()
+		{
+			// get data
+			string url = string.Format("https://{0}-{1}.c9.io/leaderboard/create?name={2}&score={3}", 
+				_C9ProjectName, _C9Username, _InputName.text, _InputScore.text);
+			WWW www = new WWW(url);
+			yield return www;
+			if (null != www.error)
+			{
+				www.Dispose ();
+				yield break;
+			}
+			
+			string jsonData = www.text;
+			www.Dispose();
+			Debug.Log(jsonData);
+		}
+```
+
+### Destroying Data Over WWW
+
+```
+		public IEnumerator destroyData(int id)
+		{
+			// get data
+			string url = string.Format("https://{0}-{1}.c9.io/leaderboard/destroy?id={2}",
+				_C9ProjectName, _C9Username, id);
+			WWW www = new WWW(url);
+			yield return www;
+			if (null != www.error)
+			{
+				www.Dispose ();
+				yield break;
+			}
+			string jsonData = www.text;
+			www.Dispose();
+			Debug.Log(jsonData);
+		}
+```
+
+### Reading Data Over WWW
+
+```
+		public IEnumerator requestData()
+		{
+			// get data
+			string url = string.Format("https://{0}-{1}.c9.io/leaderboard?limit=10&sort=score%20DESC%20createdAt%20ASC",
+				_C9ProjectName, _C9Username);
+			WWW www = new WWW(url);
+			yield return www;
+			if (null != www.error)
+			{
+				www.Dispose ();
+				yield break;
+			}
+
+			string jsonData = www.text;
+			www.Dispose();
+			Debug.Log(jsonData);
+
+			LeaderboardData[] results = JsonMapper.ToObject<LeaderboardData[]>(jsonData);
+		}
+```
