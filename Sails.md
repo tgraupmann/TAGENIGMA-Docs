@@ -177,6 +177,20 @@ https://sailsdemo-tgraupmann.c9.io/leaderboard/destroy?id=1
 
 ![Leaderboard API](Sails/image-22.png)
 
+## Access With `Sockets.io`
+
+* With `Socket.io` open a socket connection.
+
+```
+var socket = io.connect("https://sailsdemo-tgraupmann.c9.io/");
+```
+
+* The `leaderboard` data is available using `Socket.io` using the socket connection to request data from the `leaderboard` page.
+
+```
+socket.request("/leaderboard", "{}", function (leaderboards) { console.log(leaderboards); });
+```
+
 ## Accessing Leaderboard Data from Unity
 
 The [UnitySailsLeaderboard](https://github.com/tgraupmann/tagenigma-examples/tree/master/UnitySailsLeaderboard) example reads the `Sails.js` leaderboard data to display using the new Unity 4.6 UI.
