@@ -87,6 +87,10 @@ sails lift
 
 * Preview the page to confirm `Sails.js` has loaded.
 
+```
+https://sailsdemo-tgraupmann.c9.io/
+```
+
 ![Preview leaderboard](Sails/image-14.png)
 
 * In the terminal create a `leaderboard` api model and restart `Sails.js`.
@@ -158,6 +162,12 @@ module.exports = {
 ```
 
 ![Leaderboard API](Sails/image-24.png)
+
+* After making a change to the model, restart `Sails.js`.
+
+```
+sails lift
+``` 
 
 * Destroy will remove a record using the "id" field. More details are available on the page [Destroy a record](http://sailsjs.org/#/documentation/reference/blueprint-api/Destroy.html) in the `Blueprint API`.
 
