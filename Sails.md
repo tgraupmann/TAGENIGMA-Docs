@@ -146,6 +146,19 @@ https://sailsdemo-tgraupmann.c9.io/leaderboard?limit=10&sort=score%20DESC%20crea
 
 ![Leaderboard API](Sails/image-21.png)
 
+* To sort `Score` values properly change the `leaderboard model` attribute field for `Score` to use an `integer` type. Otherwise the `Score` values would sort in `String` order which is not ideal.
+
+```
+module.exports = {
+  attributes: {
+    name:{type:'string'},
+    score:{type:'integer'}
+  }
+};
+```
+
+![Leaderboard API](Sails/image-24.png)
+
 * Destroy will remove a record using the "id" field. More details are available on the page [Destroy a record](http://sailsjs.org/#/documentation/reference/blueprint-api/Destroy.html) in the `Blueprint API`.
 
 ```
