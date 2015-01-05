@@ -413,4 +413,13 @@ netsh http add sslcert ipport=0.0.0.0:8443 certhash=71e47da4b4661650eeabc138822d
 
 ![Leaderboard API](Sails/image-53.png)
 
-* Restart the proxy and browse the `https://localhost:8443/` page in your browser and add a `security exception` to allow the self-signed `certificate`. 
+* Restart the proxy and browse the `https://localhost:8443/` page in your browser and add a `security exception` to allow the self-signed `certificate`. Expand `I Understand the Risks` and click `Add Exception`. 
+
+![Leaderboard API](Sails/image-54.png)
+
+
+* Click `Confirm Security Exception` to allow the browser to use your `self-signed certificate`.
+
+![Leaderboard API](Sails/image-55.png)
+
+* At this point `Socket.io` will be able to use your `proxy`.
