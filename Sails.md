@@ -295,3 +295,123 @@ socket.request("/leaderboard", "{}", function (leaderboards) { console.log(leade
 ![Leaderboard API](Sails/image-28.png)
 
 * Hosting `HTTPS` requires some certificate setup which can use self-assigned certs.
+You will need to open the `Visual Studio Command Prompt` as `Administrator` to run with elevated permissions to install the certificates.
+Start in an empty folder where you'll make the certificates.
+
+![Leaderboard API](Sails/image-29.png)
+
+* Create a `certificate authority` from the `Developer Command Prompt` running as `Administrator`.
+
+```
+makecert -n "CN=vMargeCA" -r -sv vMargeCA.pvk vMargeCA.cer
+```
+
+![Leaderboard API](Sails/image-30.png)
+
+* Open the `Management Console` by running `Start->Run->` and enter `MMC`.
+
+![Leaderboard API](Sails/image-32.png)
+
+* Use the `File->Add/Remove Snap-in...` to customize the `MMC` snap-ins.
+
+![Leaderboard API](Sails/image-31.png)
+
+* Select `Certificates` and click the `Add` button.
+
+![Leaderboard API](Sails/image-33.png)
+
+* Choose `Computer account` and click the `Next` button.
+
+![Leaderboard API](Sails/image-34.png)
+
+* Choose `Local computer` and click the `Finish` button.
+
+![Leaderboard API](Sails/image-35.png)
+
+* Click the `OK` button.
+
+![Leaderboard API](Sails/image-36.png)
+
+* Expand `Certificates (Local Computer)`. Expand `Trusted Root Certificate Authorities`.
+`Right-Click` the `Certificates` subfolder and select the `All Tasks->Import...` menu item.
+
+![Leaderboard API](Sails/image-37.png)
+
+* Click the `Next >` button in the `Import Wizard`. 
+
+![Leaderboard API](Sails/image-38.png)
+
+* Click the `Browse...` button in the `Import Wizard`.
+
+![Leaderboard API](Sails/image-39.png)
+
+* Open the self-signed `vMargeCA.cer` certificate-authority file. 
+
+![Leaderboard API](Sails/image-40.png)
+
+* Click the `Next >` button in the `Import Wizard` to import the `certificate`.
+
+![Leaderboard API](Sails/image-41.png)
+
+* Click the `Next >` button in the `Import Wizard` to add the `certificate` to the `Trusted Root Certification Authorities`.
+
+![Leaderboard API](Sails/image-42.png)
+
+* Click the `Finish` button in the "Import Wizard".
+
+![Leaderboard API](Sails/image-43.png)
+
+* Click the `OK` button to finish the import.
+
+![Leaderboard API](Sails/image-44.png)
+
+* Create a `certificate` to sign with the self certificate authority` from the `Developer Command Prompt` running as `Administrator`.
+
+```
+makecert -sk vMargeSignedByCA -iv vMargeCA.pvk -n "CN=vMargeSignedByCA" -ic vMargeCA.cer vMargeSignedByCA.cer -sr localmachine -ss My
+```
+
+![Leaderboard API](Sails/image-45.png)
+
+* This will have automatically installed the self signed certificate in `Personal Certificates`.
+
+![Leaderboard API](Sails/image-46.png)
+
+* `Right-Click` the `vMargeSignedByCA` certificate in the `MMC` console and select `Open` menu item.
+
+![Leaderboard API](Sails/image-47.png)
+
+* Select the `Details` tab.
+
+![Leaderboard API](Sails/image-48.png)
+
+* Select `Properties Only` in the `Show` drop down.
+
+![Leaderboard API](Sails/image-49.png)
+
+* Select the `Thumbprint` property and copy the text to use the certificate. Remove all the whitespace. Your thumbprint will be different.
+
+```
+71e47da4b4661650eeabc138822d9be782a387ff
+```
+
+![Leaderboard API](Sails/image-50.png)
+
+
+* In the `proxy` application in the `AssemblyInfo.cs` grab the `Guid` that uniquely defines the app to use with the `certificate`.
+
+`218ad6b0-c657-462b-80d4-7b626a68c855`
+
+![Leaderboard API](Sails/image-52.png)
+
+* Use the `Thumbprint` property (without spaces) for the `certhash` and the `application guid` for the `appid`.
+If you change the `port` of the `proxy` make sure that `ipport` uses that `port`.
+
+```
+netsh http add sslcert ipport=0.0.0.0:8443 certhash=71e47da4b4661650eeabc138822d9be782a387ff appid={218ad6b0-c657-462b-80d4-7b626a68c855}
+```
+
+![Leaderboard API](Sails/image-51.png)
+
+* Restart the proxy and browse the `https://localhost:8443/` page in your browser and add a `security exception` to allow the self-signed `certificate`. 
+
