@@ -411,7 +411,6 @@ If you change the `port` of the `proxy` make sure that `ipport` uses that `port`
 netsh http add sslcert ipport=0.0.0.0:8443 certhash=71e47da4b4661650eeabc138822d9be782a387ff appid={218ad6b0-c657-462b-80d4-7b626a68c855}
 ```
 
-![Leaderboard API](Sails/image-51.png)
+![Leaderboard API](Sails/image-53.png)
 
 * Restart the proxy and browse the `https://localhost:8443/` page in your browser and add a `security exception` to allow the self-signed `certificate`. 
-
