@@ -265,3 +265,33 @@ The [UnitySailsLeaderboard](https://github.com/tgraupmann/tagenigma-examples/tre
 			LeaderboardData[] results = JsonMapper.ToObject<LeaderboardData[]>(jsonData);
 		}
 ```
+
+# Debugging `Sails.js` and `Socket.io`
+
+One way to troubleshoot communication between a server and client is by using a proxy that logs communication.
+[SailsDebugSocketIO](https://github.com/tgraupmann/tagenigma-examples/tree/master/SailsDebugSocketIO) is a console application that runs an HttpListener while logging the communication on the `Sails.js` sockets. 
+
+![Leaderboard API](Sails/image-25.png)
+
+
+* With a `proxy` instead of connecting `Socket.io` to the server, connect with the client address and port of the `proxy`.
+
+```
+var socket = io.connect("https://localhost:8443/");
+```
+
+![Leaderboard API](Sails/image-26.png)
+
+* Requesting leaderboard data uses the regular API while the data is logged in the `proxy`.
+
+```
+socket.request("/leaderboard", "{}", function (leaderboards) { console.log(leaderboards); });
+```
+
+![Leaderboard API](Sails/image-27.png)
+
+* Open `SailsDebugSocketIO.sln` in `Visual Studio` as `Administrator` to run with enough permissions to start the `HttpListener` which by default runs on ports `8080` for `HTTP` and `8443` for `HTTPS`. Start the `proxy` server from `Visual Studio`.
+
+![Leaderboard API](Sails/image-28.png)
+
+* Hosting `HTTPS` requires some certificate setup which can use self-assigned certs.
