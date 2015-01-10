@@ -273,6 +273,18 @@ One way to troubleshoot communication between a server and client is by using a 
 
 ![Leaderboard API](Sails/image-25.png)
 
+* Note before using the proxy in the browser, confirm any security exceptions that may happen browsing the proxy server directly. The browser may consider your localhost `proxy` as unsafe, so expand `advanced`.
+
+```
+https://localhost:8443/
+```
+
+![Unsafe](Sails/image-56.png)
+
+* Click `Proceed to localhost (unsafe) and you should see a blank page.
+
+![Unsafe](Sails/image-57.png)
+
 
 * With a `proxy` instead of connecting `Socket.io` to the server, connect with the client address and port of the `proxy`.
 
