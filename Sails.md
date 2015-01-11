@@ -2,7 +2,9 @@
 
 [Sails.js](http://sailsjs.org) is a powerful web framework that auto-generates REST APIs and the socket layer simultaneously.
 
-Follow the [Getting Started](https://github.com/balderdashy/sails-docs/blob/master/getting-started/getting-started.md) docs to get started with Sails.
+* Follow the [Getting Started](https://github.com/balderdashy/sails-docs/blob/master/getting-started/getting-started.md) docs to get started with Sails.
+
+* Talk `Sails.js` with [IRC on FreeNode](http://webchat.freenode.net/?channels=sailsjs)
 
 <table border=1>
  <tr>
