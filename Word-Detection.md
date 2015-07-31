@@ -177,3 +177,32 @@ Q & A
 -----
 
 You can send comments/questions to support@theylovegames.com where your feedback will help us create new tutorials and features in order to improve the product.
+
+
+# API
+
+The word detection API provides a callback event for detected words.
+
+```
+        //subscribe detection event
+        AudioWordDetection.WordDetectedEvent += WordDetectedHandler;
+```
+
+## Detected Word Score
+
+The word detection system uses an event that fires when the word with the best score satisfies a match.
+
+```
+    /// <summary>
+    /// Handle word detected event
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="args"></param>
+    void WordDetectedHandler(object sender, WordDetection.WordEventArgs args)
+    {
+    }
+```
+
+The `WordEventArgs` argument has a public field that includes the name of the detected word `args.Details.Label`.
+
+The `WordEventArgs` argument has a score that identifies the strength of the match (larger score indicates better match) `args.Details.Score`. 
