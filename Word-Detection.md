@@ -172,6 +172,7 @@ Change Log
 
 1.10 - Word Detection can now drive a Character Controller
 
+1.11 - Upgraded to Unity 5.1.2. Truncated some data files to reduce the core package size. Example data files can be downloaded from: [WordDetection_GoatMediaClips.unitypackage](https://github.com/tgraupmann/TAGENIGMA-Docs/blob/master/Word-Detection/Data/WordDetection_GoatMediaClips.unitypackage)
 
 Q & A
 -----
