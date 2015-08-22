@@ -43,8 +43,6 @@ Hardware testing
 
 (Android)
 
-OUYA
-
 Nexus 10
 
 Samsung Galaxy S III
@@ -179,6 +177,17 @@ Q & A
 
 You can send comments/questions to support@theylovegames.com where your feedback will help us create new tutorials and features in order to improve the product.
 
+# Getting Started
+
+1) Start with a new Scene.
+
+2) Create a `GameObject` called `Spectrum Microphone` and attach the `Spectrum Microphone` script. The default capture time is `1 second` and the default sampling rate is `8192`. Adding `Spectrum Microphone` will also add an `Audio Source` component. This script allows recording from the microphone and playing back sample recordings.
+
+![image-1](Word-Detection/image_1.png)
+
+3) Create a `GameObject` called `Word Detection` and attach the `Word Detection` script. The default threshold is `60` and use push to talk is `off`. Drag the `Spectrum Microphone` from the Scene to the `Spectrum Microphone` field on the `Word Detection` script. This allows `Word Detection` to use the `Microphone` data.
+
+![image-2](Word-Detection/image_2.png)
 
 # API
 
