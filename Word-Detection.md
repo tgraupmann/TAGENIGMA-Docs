@@ -294,6 +294,8 @@ public class Example18 : MonoBehaviour
 
 7) The script needs access to the `SpectrumMicrophone` data so that recordings can be assigned to the word profiles. Be sure to drag the `SpectrumMicrophone` to the `_mSpectrumMicrophone` field on the `Example18` script.
 
+![image-4](Word-Detection/image_4.png)
+
 ```
 public class Example18 : MonoBehaviour
 {
@@ -304,7 +306,7 @@ public class Example18 : MonoBehaviour
 }
 ```
 
-8) The `WordDetails` profiles need to be set for the word detection event to start firing when those words are detected. 
+8) The `WordDetails` profiles need to be set for the word detection event to start firing when those words are detected.
 
 # API
 
