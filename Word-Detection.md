@@ -292,7 +292,7 @@ public class Example18 : MonoBehaviour
     }
 ```
 
-7) Add a helper function to retrieve the word profile given the label of the `WordDetails`.
+7) Add a helper method to retrieve the word profile given the label of the `WordDetails`.
 
 ```
     private WordDetails GetWord(string label)
@@ -411,7 +411,7 @@ public class Example18 : MonoBehaviour
         // Show the last detected word in a label
         GUILayout.Label(string.Format("Last Detected Word: " + _mLastDetectedWord));
 
-        ShowButtonSetProfile("Set Noise Profile", "Noise", currentEvent);
+        ShowButtonSetProfile("Set `Noise` Profile", "Noise", currentEvent);
         ShowButtonSetProfile("Set `Go` Profile", "Go", currentEvent);
         ShowButtonSetProfile("Set `Duck` Profile", "Duck", currentEvent);
 		ShowButtonSetProfile("Set `Left` Profile", "Left", currentEvent);
