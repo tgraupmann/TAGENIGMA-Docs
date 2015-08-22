@@ -189,12 +189,12 @@ You can send comments/questions to support@theylovegames.com where your feedback
 
 ![image-2](Word-Detection/image_2.png)
 
-4) At a minimum you'll need a script that has a word detection callback. Create an `Example` GameObject in the scene and attach the `Example` script. You can replace the word `Example` with your own script and GameObject names. Be sure to set the `_mWordDetection` field with a reference to the `WordDetection` object in the scene.
+4) At a minimum you'll need a script that has a word detection callback. Create an `Example18` GameObject in the scene and attach the `Example18` script. You can use your own script and GameObject name as you follow along. Be sure to set the `_mWordDetection` field with a reference to the `WordDetection` object in the scene. This script adds the initial `Noise` profile for filtering out background noise. Word profiles also have to be initialized before they can be used in detection.
 
 ```
 using UnityEngine;
 
-public class Example : MonoBehaviour
+public class Example18 : MonoBehaviour
 {
     /// <summary>
     /// Reference to the Word Detection object in the scene
@@ -212,7 +212,7 @@ public class Example : MonoBehaviour
             return;
         }
 
-        // prepopulate words
+        // populate the word set
         _mWordDetection.Words.Add(new WordDetails() { Label = "Noise" });
 
         //subscribe detection event
@@ -235,6 +235,74 @@ public class Example : MonoBehaviour
     }
 }
 ```
+
+5) Expand the existing example to detect additional words. In the start event expand the set of words to detect.
+
+```
+    void Start()
+    {
+        if (null == _mWordDetection)
+        {
+            Debug.LogError("Missing meta reference to Word Detection");
+            return;
+        }
+
+        // populate the word set
+
+		// Background noise is the word profile we always want to ignore during detection
+        _mWordDetection.Words.Add(new WordDetails() { Label = "Noise" });
+
+		// Add a word to detect when saying "Go"
+        _mWordDetection.Words.Add(new WordDetails() { Label = "Go" });
+
+		// Add a word to detect when saying "Duck"
+        _mWordDetection.Words.Add(new WordDetails() { Label = "Duck" });
+
+		// Add a word to detect when saying "Left"
+        _mWordDetection.Words.Add(new WordDetails() { Label = "Left" });
+
+		// Add a word to detect when saying "Right"
+        _mWordDetection.Words.Add(new WordDetails() { Label = "Right" });
+
+        //subscribe detection event
+        _mWordDetection.WordDetectedEvent += WordDetectedHandler;
+    }
+```
+
+6) Add a helper function to retrieve the word profile given the label of the `WordDetails`.
+
+```
+    protected virtual WordDetails GetWord(string label)
+    {
+        foreach (WordDetails details in AudioWordDetection.Words)
+        {
+            if (null == details)
+            {
+                continue;
+            }
+            if (details.Label.Equals(label))
+            {
+                return details;
+            }
+        }
+
+        return null;
+    }
+```
+
+7) The script needs access to the `SpectrumMicrophone` data so that recordings can be assigned to the word profiles. Be sure to drag the `SpectrumMicrophone` to the `_mSpectrumMicrophone` field on the `Example18` script.
+
+```
+public class Example18 : MonoBehaviour
+{
+    /// <summary>
+    /// Reference to the spectrum microphone
+    /// </summary>
+    public SpectrumMicrophone _mSpectrumMicrophone = null;
+}
+```
+
+8) The `WordDetails` profiles need to be set for the word detection event to start firing when those words are detected. 
 
 # API
 
