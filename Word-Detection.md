@@ -306,7 +306,36 @@ public class Example18 : MonoBehaviour
 }
 ```
 
-8) The `WordDetails` profiles need to be set for the word detection event to start firing when those words are detected.
+8) When creating a word profile be sure that detection is being ignored.
+
+```
+    /// <summary>
+    /// Indicates a profile is being recorded
+    /// </summary>
+    private bool _mRecordingProfile = false;
+
+    /// <summary>
+    /// Callback for word detected event
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="args"></param>
+    private void WordDetectedHandler(object sender, WordDetection.WordEventArgs args)
+    {
+        if (_mRecordingProfile)
+        {
+            return;
+        }
+
+        if (string.IsNullOrEmpty(args.Details.Label))
+        {
+            return;
+        }
+
+        Debug.Log(string.Format("Detected: {0}", args.Details.Label));
+    }
+```
+
+9) The `WordDetails` profiles need to be set for the word detection event to start firing when those words are detected.
 
 # API
 
