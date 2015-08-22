@@ -226,7 +226,7 @@ public class Example18 : MonoBehaviour
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="args"></param>
-    void WordDetectedHandler(object sender, WordDetection.WordEventArgs args)
+    private void WordDetectedHandler(object sender, WordDetection.WordEventArgs args)
     {
         if (string.IsNullOrEmpty(args.Details.Label))
         {
@@ -274,7 +274,7 @@ public class Example18 : MonoBehaviour
 6) Add a helper function to retrieve the word profile given the label of the `WordDetails`.
 
 ```
-    protected virtual WordDetails GetWord(string label)
+    private WordDetails GetWord(string label)
     {
         foreach (WordDetails details in AudioWordDetection.Words)
         {
