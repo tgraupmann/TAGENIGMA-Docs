@@ -228,12 +228,6 @@ public class Example18 : MonoBehaviour
     /// <param name="args"></param>
     private void WordDetectedHandler(object sender, WordDetection.WordEventArgs args)
     {
-        if (string.IsNullOrEmpty(args.Details.Label))
-        {
-            return;
-        }
-
-        Debug.Log(string.Format("Detected: {0}", args.Details.Label));
     }
 }
 ```
@@ -271,7 +265,34 @@ public class Example18 : MonoBehaviour
     }
 ```
 
-6) Add a helper function to retrieve the word profile given the label of the `WordDetails`.
+6) Add a string field to hold the last detected word. Add an OnGUI event to display the last detected word.
+
+```
+    /// <summary>
+    /// Callback for word detected event
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="args"></param>
+    private void WordDetectedHandler(object sender, WordDetection.WordEventArgs args)
+    {
+        if (string.IsNullOrEmpty(args.Details.Label))
+        {
+            return;
+        }
+
+        _mLastDetectedWord = args.Details.Label;
+    }
+
+    /// <summary>
+    /// Display event
+    /// </summary>
+    void OnGUI()
+    {
+        GUILayout.Label(string.Format("Last Detected Word: " + _mLastDetectedWord));
+    }
+```
+
+7) Add a helper function to retrieve the word profile given the label of the `WordDetails`.
 
 ```
     private WordDetails GetWord(string label)
@@ -292,7 +313,7 @@ public class Example18 : MonoBehaviour
     }
 ```
 
-7) The script needs access to the `SpectrumMicrophone` data so that recordings can be assigned to the word profiles. Be sure to drag the `SpectrumMicrophone` to the `_mSpectrumMicrophone` field on the `Example18` script.
+8) The script needs access to the `SpectrumMicrophone` data so that recordings can be assigned to the word profiles. Be sure to drag the `SpectrumMicrophone` to the `_mSpectrumMicrophone` field on the `Example18` script.
 
 ![image-4](Word-Detection/image_4.png)
 
@@ -306,7 +327,7 @@ public class Example18 : MonoBehaviour
 }
 ```
 
-8) When creating a word profile be sure that detection is being ignored.
+9) When creating a word profile be sure that detection is being ignored.
 
 ```
     /// <summary>
@@ -331,11 +352,74 @@ public class Example18 : MonoBehaviour
             return;
         }
 
-        Debug.Log(string.Format("Detected: {0}", args.Details.Label));
+        _mLastDetectedWord = args.Details.Label;
     }
 ```
 
-9) The `WordDetails` profiles need to be set for the word detection event to start firing when those words are detected.
+10) Add a helper method that displays a GUI button and when pressed assigns the profile for a word.
+
+```
+    /// <summary>
+    /// Create a push to talk button that creates a word profile
+    /// </summary>
+    /// <param name="buttonLabel"></param>
+    /// <param name="wordLabel"></param>
+    /// <param name="currentEvent"></param>
+    private void ShowButtonSetProfile(string buttonLabel, string wordLabel, Event currentEvent)
+    {
+        GUILayout.Button(buttonLabel);
+        if (null != currentEvent)
+        {
+            Rect rect = GUILayoutUtility.GetLastRect();
+            bool overButton = rect.Contains(currentEvent.mousePosition);
+            if (Input.GetMouseButton(0))
+            {
+                if (overButton)
+                {
+                    _mRecordingProfile = true;
+                }
+            }
+            else
+            {
+                if (_mRecordingProfile)
+                {
+                    WordDetails details = GetWord(wordLabel);
+                    if (null != details)
+                    {
+                        details.Wave = _mSpectrumMicrophone.GetLastData();
+                    }
+                    _mRecordingProfile = false;
+                }
+            }
+        }
+    }
+```
+
+11) The `WordDetails` profiles need to be set for the word detection event to start firing when those words are detected. Create buttons that will assign the word profiles for the set of words being detected.
+
+![image-5](Word-Detection/image_5.png)
+
+```
+    /// <summary>
+    /// Display event
+    /// </summary>
+    void OnGUI()
+    {
+        // Get the current event to know when buttons are held
+        Event currentEvent = Event.current;
+
+        // Show the last detected word in a label
+        GUILayout.Label(string.Format("Last Detected Word: " + _mLastDetectedWord));
+
+        ShowButtonSetProfile("Set Noise Profile", "Noise", currentEvent);
+        ShowButtonSetProfile("Set `Go` Profile", "Go", currentEvent);
+        ShowButtonSetProfile("Set `Duck` Profile", "Duck", currentEvent);
+		ShowButtonSetProfile("Set `Left` Profile", "Left", currentEvent);
+		ShowButtonSetProfile("Set `Right` Profile", "Right", currentEvent);
+
+        GUILayout.Label(string.Format("Is Recording Profile: {0}", _mRecordingProfile));
+    }
+```
 
 # API
 
