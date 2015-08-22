@@ -191,6 +191,8 @@ You can send comments/questions to support@theylovegames.com where your feedback
 
 4) At a minimum you'll need a script that has a word detection callback. Create an `Example18` GameObject in the scene and attach the `Example18` script. You can use your own script and GameObject name as you follow along. Be sure to set the `_mWordDetection` field with a reference to the `WordDetection` object in the scene. This script adds the initial `Noise` profile for filtering out background noise. Word profiles also have to be initialized before they can be used in detection.
 
+![image-3](Word-Detection/image_3.png)
+
 ```
 using UnityEngine;
 
