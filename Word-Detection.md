@@ -189,6 +189,52 @@ You can send comments/questions to support@theylovegames.com where your feedback
 
 ![image-2](Word-Detection/image_2.png)
 
+4) At a minimum you'll need a script that has a word detection callback. Be sure to set the `_mWordDetection` field with a reference to the `WordDetection` object in the scene.
+
+```
+using UnityEngine;
+
+public class Example : MonoBehaviour
+{
+    /// <summary>
+    /// Reference to the Word Detection object in the scene
+    /// </summary>
+    public WordDetection _mWordDetection = null;
+
+    /// <summary>
+    /// Create initial word set and subscribe to the word detection callback
+    /// </summary>
+    void Start()
+    {
+        if (null == _mWordDetection)
+        {
+            Debug.LogError("Missing meta reference to Word Detection");
+            return;
+        }
+
+        // prepopulate words
+        _mWordDetection.Words.Add(new WordDetails() { Label = "Noise" });
+
+        //subscribe detection event
+        _mWordDetection.WordDetectedEvent += WordDetectedHandler;
+    }
+
+    /// <summary>
+    /// Callback for word detected event
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="args"></param>
+    void WordDetectedHandler(object sender, WordDetection.WordEventArgs args)
+    {
+        if (string.IsNullOrEmpty(args.Details.Label))
+        {
+            return;
+        }
+
+        Debug.Log(string.Format("Detected: {0}", args.Details.Label));
+    }
+```
+
 # API
 
 The word detection API provides a callback event for detected words.
