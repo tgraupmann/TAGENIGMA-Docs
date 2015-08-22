@@ -189,7 +189,7 @@ You can send comments/questions to support@theylovegames.com where your feedback
 
 ![image-2](Word-Detection/image_2.png)
 
-4) At a minimum you'll need a script that has a word detection callback. Be sure to set the `_mWordDetection` field with a reference to the `WordDetection` object in the scene.
+4) At a minimum you'll need a script that has a word detection callback. Create an `Example` GameObject in the scene and attach the `Example` script. You can replace the word `Example` with your own script and GameObject names. Be sure to set the `_mWordDetection` field with a reference to the `WordDetection` object in the scene.
 
 ```
 using UnityEngine;
@@ -233,6 +233,7 @@ public class Example : MonoBehaviour
 
         Debug.Log(string.Format("Detected: {0}", args.Details.Label));
     }
+}
 ```
 
 # API
