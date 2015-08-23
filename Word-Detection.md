@@ -614,8 +614,11 @@ The microphone data was previous cleared after a profile was setup. Now use the 
             return;
         }
 
-        _mLastDetectedWord = args.Details.Label;
-		_mDelay = DateTime.Now + TimeSpan.FromSeconds(1);
+		if (_mDelay < System.DateTime.Now)
+		{
+        	_mLastDetectedWord = args.Details.Label;
+			_mDelay = DateTime.Now + TimeSpan.FromSeconds(1);
+		}
     }
 ```
 
