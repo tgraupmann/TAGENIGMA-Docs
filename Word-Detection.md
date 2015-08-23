@@ -374,7 +374,7 @@ public class Example18 : MonoBehaviour
     /// <summary>
     /// Indicates a profile is being recorded
     /// </summary>
-    private bool _mRecordingProfile = false;
+    private string _mRecordingProfile = string.Empty;
 
     /// <summary>
     /// Callback for word detected event
@@ -383,7 +383,7 @@ public class Example18 : MonoBehaviour
     /// <param name="args"></param>
     private void WordDetectedHandler(object sender, WordDetection.WordEventArgs args)
     {
-        if (_mRecordingProfile)
+        if (!string.IsNullOrEmpty(_mRecordingProfile))
         {
             return;
         }
@@ -461,31 +461,31 @@ public class Example18 : MonoBehaviour
     /// <param name="buttonLabel"></param>
     /// <param name="wordLabel"></param>
     /// <param name="currentEvent"></param>
-    private void ShowButtonSetProfile(string buttonLabel, string wordLabel, Event currentEvent)
+	private void ShowButtonSetProfile(string buttonLabel, string wordLabel, Event currentEvent)
     {
         GUILayout.Button(buttonLabel);
+        Rect rect = GUILayoutUtility.GetLastRect();
         if (null != currentEvent)
         {
-            Rect rect = GUILayoutUtility.GetLastRect();
             bool overButton = rect.Contains(currentEvent.mousePosition);
             if (Input.GetMouseButton(0))
             {
                 if (overButton)
                 {
-                    _mRecordingProfile = true;
+                    _mRecordingProfile = wordLabel;
                 }
             }
             else
             {
-                if (_mRecordingProfile)
+                if (_mRecordingProfile == wordLabel)
                 {
-                    WordDetails details = GetWord(wordLabel);
+                    WordDetails details = GetWord(_mRecordingProfile);
                     if (null != details)
                     {
                         details.Wave = GetMicrophoneData();
-						PlayProfile(details);
+                        PlayProfile(details);
                     }
-                    _mRecordingProfile = false;
+                    _mRecordingProfile = string.Empty;
                 }
             }
         }
@@ -510,13 +510,12 @@ public class Example18 : MonoBehaviour
         // Show the last detected word in a label
         GUILayout.Label(string.Format("Last Detected Word: " + _mLastDetectedWord));
 
-        ShowButtonSetProfile("Set `Noise` Profile", "Noise", currentEvent);
-        ShowButtonSetProfile("Set `Go` Profile", "Go", currentEvent);
-        ShowButtonSetProfile("Set `Duck` Profile", "Duck", currentEvent);
-		ShowButtonSetProfile("Set `Left` Profile", "Left", currentEvent);
-		ShowButtonSetProfile("Set `Right` Profile", "Right", currentEvent);
+        foreach (WordDetails details in _mWordDetection.Words)
+        {
+            ShowButtonSetProfile(string.Format("Set `{0}` Profile", details.Label), details.Label, currentEvent);
+        }
 
-        GUILayout.Label(string.Format("Is Recording Profile: {0}", _mRecordingProfile));
+        GUILayout.Label(string.Format("Recording Profile: {0}", _mRecordingProfile));
     }
 ```
 
