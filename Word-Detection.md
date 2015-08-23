@@ -567,6 +567,8 @@ public class Example18 : MonoBehaviour
     }
 ```
 
+18) Here is a direct link to the completed source for [Example-18](Word-Detection/Example18/Example18.cs).
+
 # API
 
 The word detection API provides a callback event for detected words.
