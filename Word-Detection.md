@@ -397,7 +397,58 @@ public class Example18 : MonoBehaviour
     }
 ```
 
-12) Add a helper method that displays a GUI button and when pressed assigns the profile for a word.
+12) Add a helper method to get the Microphone data to save in word profiles.
+
+```
+    /// <summary>
+    /// Holds a copy of the microphone data
+    /// </summary>
+    private float[] _mMicrophoneData = null;
+
+    /// <summary>
+    /// Get the microphone data from the spectrum microphone
+    /// </summary>
+    /// <returns></returns>
+    private float[] GetMicrophoneData()
+    {
+        int position = _mSpectrumMicrophone.GetPosition();
+        int size = _mSpectrumMicrophone.CaptureTime * _mSpectrumMicrophone.SampleRate;
+        float[] data = _mSpectrumMicrophone.GetData(0);
+
+        if (null == _mMicrophoneData ||
+            _mMicrophoneData.Length != size)
+        {
+            _mMicrophoneData = new float[size];
+        }
+
+        //shift array
+        for (int index = 0, i = position; index < size; ++index, i = (i + 1) % size)
+        {
+            _mMicrophoneData[index] = data[i];
+        }
+
+        return _mMicrophoneData;
+    }
+```
+
+13) Add a helper method for playing back recorded word profiles.
+
+```
+    private void PlayProfile(WordDetails details)
+    {
+        //play the audio
+        if (null == details.Audio)
+        {
+            details.Audio = AudioClip.Create(string.Empty, details.Wave.Length, 1, _mSpectrumMicrophone.SampleRate, false);
+        }
+        details.Audio.SetData(details.Wave, 0);
+        _mSpectrumMicrophone.GetComponent<AudioSource>().loop = false;
+        _mSpectrumMicrophone.GetComponent<AudioSource>().mute = false;
+        _mSpectrumMicrophone.GetComponent<AudioSource>().PlayOneShot(details.Audio);
+    }
+```
+
+14) Add a helper method that displays a GUI button and when pressed assigns the profile for a word.
 
 ```
     /// <summary>
@@ -427,7 +478,8 @@ public class Example18 : MonoBehaviour
                     WordDetails details = GetWord(wordLabel);
                     if (null != details)
                     {
-                        details.Wave = _mSpectrumMicrophone.GetLastData();
+                        details.Wave = GetMicrophoneData();
+						PlayProfile(details);
                     }
                     _mRecordingProfile = false;
                 }
@@ -436,7 +488,7 @@ public class Example18 : MonoBehaviour
     }
 ```
 
-13) The `WordDetails` profiles need to be set for the word detection event to start firing when those words are detected. Create buttons that will assign the word profiles for the set of words being detected.
+14) The `WordDetails` profiles need to be set for the word detection event to start firing when those words are detected. Create buttons that will assign the word profiles for the set of words being detected.
 
 ![image-5](Word-Detection/image_5.png)
 
