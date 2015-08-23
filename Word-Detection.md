@@ -327,7 +327,48 @@ public class Example18 : MonoBehaviour
 }
 ```
 
-9) When creating a word profile be sure that detection is being ignored.
+9) Add a helper method for selecting the word detection `Microphone`.
+
+```
+    /// <summary>
+    /// Show the available Microphones to select from
+    /// </summary>
+    private void ShowMicrophoneSelector()
+    {
+        GUILayout.Label(string.Format("Select a microphone: count={0}", Microphone.devices.Length));
+
+        foreach (string device in Microphone.devices)
+        {
+            if (string.IsNullOrEmpty(device))
+            {
+                continue;
+            }
+
+            if (GUILayout.Button(device, GUILayout.Height(60)))
+            {
+                _mSpectrumMicrophone.DeviceName = device;
+            }
+        }
+    }
+```
+
+10) When the scene starts, the user needs to select a `Microphone`. Just using the first `Microphone` is not ideal since most users will have multiple detected microphones and will need to select which one to use.
+
+![image-6](Word-Detection/image_6.png)
+
+```
+    void OnGUI()
+    {
+        if (string.IsNullOrEmpty(_mSpectrumMicrophone.DeviceName))
+        {
+            ShowMicrophoneSelector();
+            return;
+        }
+        GUILayout.Label(string.Format("Last Detected Word: " + _mLastDetectedWord));
+    }
+```
+
+11) When creating a word profile be sure that detection is being ignored.
 
 ```
     /// <summary>
@@ -356,7 +397,7 @@ public class Example18 : MonoBehaviour
     }
 ```
 
-10) Add a helper method that displays a GUI button and when pressed assigns the profile for a word.
+12) Add a helper method that displays a GUI button and when pressed assigns the profile for a word.
 
 ```
     /// <summary>
@@ -395,16 +436,18 @@ public class Example18 : MonoBehaviour
     }
 ```
 
-11) The `WordDetails` profiles need to be set for the word detection event to start firing when those words are detected. Create buttons that will assign the word profiles for the set of words being detected.
+13) The `WordDetails` profiles need to be set for the word detection event to start firing when those words are detected. Create buttons that will assign the word profiles for the set of words being detected.
 
 ![image-5](Word-Detection/image_5.png)
 
 ```
-    /// <summary>
-    /// Display event
-    /// </summary>
     void OnGUI()
     {
+        if (string.IsNullOrEmpty(_mSpectrumMicrophone.DeviceName))
+        {
+            ShowMicrophoneSelector();
+            return;
+        }
         // Get the current event to know when buttons are held
         Event currentEvent = Event.current;
 
