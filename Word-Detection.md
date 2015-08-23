@@ -434,6 +434,10 @@ public class Example18 : MonoBehaviour
 13) Add a helper method for playing back recorded word profiles.
 
 ```
+    /// <summary>
+    /// Play back the audio clip of a word profile
+    /// </summary>
+    /// <param name="details"></param>
     private void PlayProfile(WordDetails details)
     {
         //play the audio
