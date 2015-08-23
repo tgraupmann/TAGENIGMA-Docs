@@ -492,7 +492,7 @@ public class Example18 : MonoBehaviour
     }
 ```
 
-14) The `WordDetails` profiles need to be set for the word detection event to start firing when those words are detected. Create buttons that will assign the word profiles for the set of words being detected.
+15) The `WordDetails` profiles need to be set for the word detection event to start firing when those words are detected. Create buttons that will assign the word profiles for the set of words being detected.
 
 ![image-5](Word-Detection/image_5.png)
 
