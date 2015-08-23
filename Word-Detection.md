@@ -129,6 +129,8 @@ Example Scene 16 - Verbal commands control goat media clip playback
 Example Scene 17 - Verbal commands drive Character Controller input
 
 
+Example Scene 18 - Getting Started Example with Word Detection
+
 Tutorials
 ---------
 
@@ -464,9 +466,9 @@ public class Example18 : MonoBehaviour
 	private void ShowButtonSetProfile(string buttonLabel, string wordLabel, Event currentEvent)
     {
         GUILayout.Button(buttonLabel);
-        Rect rect = GUILayoutUtility.GetLastRect();
         if (null != currentEvent)
         {
+        	Rect rect = GUILayoutUtility.GetLastRect();
             bool overButton = rect.Contains(currentEvent.mousePosition);
             if (Input.GetMouseButton(0))
             {
