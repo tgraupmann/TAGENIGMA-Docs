@@ -532,6 +532,7 @@ public class Example18 : MonoBehaviour
                         details.Wave = _mMicrophoneData;
                         SetupProfile(details);
                         PlayProfile(details);
+						_mSpectrumMicrophone.ClearData();
                     }
                     _mRecordingProfile = string.Empty;
                 }
@@ -568,6 +569,59 @@ public class Example18 : MonoBehaviour
 ```
 
 18) Here is a direct link to the completed source for [Example-18](Word-Detection/Example18/Example18.cs).
+
+# Improving Accuracy
+
+Accuracy with `Word Detection` is supremely important. Here are tips to increase your accuracy.
+
+## Clear the Microphone Data when a word is detected
+
+The microphone data was previous cleared after a profile was setup. Now use the same call after a word is detected.
+
+```
+    private void WordDetectedHandler(object sender, WordDetection.WordEventArgs args)
+    {
+        if (!string.IsNullOrEmpty(_mRecordingProfile))
+        {
+            return;
+        }
+
+        if (string.IsNullOrEmpty(args.Details.Label))
+        {
+            return;
+        }
+
+        _mLastDetectedWord = args.Details.Label;
+		_mSpectrumMicrophone.ClearData();
+    }
+```
+
+## Add a delay after a word is detected
+
+
+```
+	private System.DateTime _mDelay = System.DateTime.MinValue;
+
+    private void WordDetectedHandler(object sender, WordDetection.WordEventArgs args)
+    {
+        if (!string.IsNullOrEmpty(_mRecordingProfile))
+        {
+            return;
+        }
+
+        if (string.IsNullOrEmpty(args.Details.Label))
+        {
+            return;
+        }
+
+        _mLastDetectedWord = args.Details.Label;
+		_mDelay = DateTime.Now + TimeSpan.FromSeconds(1);
+    }
+```
+
+## Trim the word detection profile
+
+In the previous examples, the word profile was set for a full second recording. Instead use the time that the button was pressed to trim the recording.
 
 # API
 
