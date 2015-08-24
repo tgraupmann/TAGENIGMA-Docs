@@ -626,6 +626,27 @@ The microphone data was previous cleared after a profile was setup. Now use the 
 
 In the previous examples, the word profile was set for a full second recording. Instead use the time that the button was pressed to trim the recording.
 
+```
+    private void FetchMicrophoneData()
+    {
+        int position = _mSpectrumMicrophone.GetPosition();
+        int size = _mSpectrumMicrophone.CaptureTime * _mSpectrumMicrophone.SampleRate;
+        float[] data = _mSpectrumMicrophone.GetData(0);
+
+        if (null == _mMicrophoneData ||
+            _mMicrophoneData.Length != size)
+        {
+            _mMicrophoneData = new float[size];
+        }
+
+        //shift array
+        for (int index = 0, i = position; index < size; ++index, i = (i + 1) % size)
+        {
+            _mMicrophoneData[index] = data[i];
+        }
+    }
+```
+
 # API
 
 The word detection API provides a callback event for detected words.
