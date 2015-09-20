@@ -674,3 +674,9 @@ The word detection system uses an event that fires when the word with the best s
 The `WordEventArgs` argument has a public field that includes the name of the detected word `args.Details.Label`.
 
 The `WordEventArgs` argument has a score that identifies the strength of the match (larger score indicates better match) `args.Details.Score`. 
+
+# UE4
+
+A `Word Detection` Plugin for [Unreal Engine](https://www.unrealengine.com/what-is-unreal-engine-4) is in the works. Stay tuned...
+
+![image-7](Word-Detection/image_7.png)
