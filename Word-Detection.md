@@ -680,3 +680,11 @@ The `WordEventArgs` argument has a score that identifies the strength of the mat
 A `Word Detection` Plugin for [Unreal Engine](https://www.unrealengine.com/what-is-unreal-engine-4) is in the works. Stay tuned...
 
 ![image-7](Word-Detection/image_7.png)
+
+## Blueprints
+
+### Create Word Set
+
+In the level or class blueprint, before word detection can begin, the word set needs to be set.
+
+![image-8](Word-Detection/image_8.png)
