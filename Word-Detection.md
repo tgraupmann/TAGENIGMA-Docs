@@ -728,7 +728,7 @@ The `WordEventArgs` argument has a score that identifies the strength of the mat
             }
             catch (Exception)
             {
-                Debug.LogError(string.Format("SaveProfile: Failed to save profile: {0}", details.Label));
+                Debug.LogError(string.Format("LoadProfile: Failed to load profile: {0}", details.Label));
             }
         }
 #endif
