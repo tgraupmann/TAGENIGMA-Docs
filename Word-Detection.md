@@ -673,7 +673,68 @@ The word detection system uses an event that fires when the word with the best s
 
 The `WordEventArgs` argument has a public field that includes the name of the detected word `args.Details.Label`.
 
-The `WordEventArgs` argument has a score that identifies the strength of the match (larger score indicates better match) `args.Details.Score`. 
+The `WordEventArgs` argument has a score that identifies the strength of the match (larger score indicates better match) `args.Details.Score`.
+
+## Saving Word Profile To Disk
+
+```
+    void SaveProfile(WordDetails details, String filePath)
+    {
+#if !UNITY_WEBPLAYER
+        if (!string.IsNullOrEmpty(filePath))
+        {
+            try
+            {
+                using (FileStream fs = File.Open(filePath, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite))
+                {
+                    using (BinaryWriter bw = new BinaryWriter(fs))
+                    {
+                        AudioWordDetection.SaveWord(bw, details);
+                        Debug.Log(string.Format("SaveProfile: Saved profile: {0}", details.Label));
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Debug.LogError(string.Format("SaveProfile: Failed to save profile: {0}", details.Label));
+            }
+        }
+#endif
+    }
+```
+
+## Load Word Profile From Disk
+
+```
+    WordDetails LoadProfile(String filePath, String label)
+    {
+		WordDetails result = null;
+#if !UNITY_WEBPLAYER
+        if (!string.IsNullOrEmpty(filePath) &&
+			File.Exists(filePath))
+        {
+            try
+            {
+                using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                    using (BinaryReader br = new BinaryReader(fs))
+                    {
+						result = new WordDetails();
+                        AudioWordDetection.LoadWord(br, details);
+                        Debug.Log(string.Format("LoadProfile: Loaded profile: {0}", label));
+                        details.Label = label;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Debug.LogError(string.Format("SaveProfile: Failed to save profile: {0}", details.Label));
+            }
+        }
+#endif
+		return result;
+    }
+```
 
 # UE4
 
