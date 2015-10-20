@@ -370,7 +370,7 @@ public class Example18 : MonoBehaviour
     }
 ```
 
-11) When creating a word profile be sure that detection is being ignored.
+11) When recording a word profile be sure that detection is being ignored.
 
 ```
     /// <summary>
@@ -443,7 +443,7 @@ public class Example18 : MonoBehaviour
     }
 ```
 
-14) Add a helper method for setting up spectrum data in the word profiles.
+14) Add a helper method for loading the microphone data into the word profiles.
 
 ```
     /// <summary>
@@ -452,29 +452,7 @@ public class Example18 : MonoBehaviour
     /// <param name="details"></param>
     private void SetupProfile(WordDetails details)
     {
-        int size = details.Wave.Length;
-        int halfSize = size / 2;
-
-        //allocate profile spectrum, real
-        if (null == details.SpectrumReal ||
-            details.SpectrumReal.Length != halfSize)
-        {
-            details.SpectrumReal = new float[halfSize];
-        }
-
-        //allocate profile spectrum, imaginary
-        if (null == details.SpectrumImag ||
-            details.SpectrumImag.Length != halfSize)
-        {
-            details.SpectrumImag = new float[halfSize];
-        }
-
-        //get the spectrum for the trimmed word
-        if (null != details.Wave &&
-            details.Wave.Length > 0)
-        {
-            _mSpectrumMicrophone.GetSpectrumData(details.Wave, details.SpectrumReal, details.SpectrumImag, FFTWindow.Rectangular);
-        }
+        _mWordDetection.LoadWord(_mMicrophoneData, 1, _mSpectrumMicrophone.SampleRate, details);
     }
 ```
 
@@ -689,7 +667,7 @@ The `WordEventArgs` argument has a score that identifies the strength of the mat
                 {
                     using (BinaryWriter bw = new BinaryWriter(fs))
                     {
-                        AudioWordDetection.SaveWord(bw, details);
+                        _mWordDetection.SaveWord(bw, details);
                         Debug.Log(string.Format("SaveProfile: Saved profile: {0}", details.Label));
                     }
                 }
@@ -720,7 +698,7 @@ The `WordEventArgs` argument has a score that identifies the strength of the mat
                     using (BinaryReader br = new BinaryReader(fs))
                     {
 						result = new WordDetails();
-                        AudioWordDetection.LoadWord(br, details);
+                        _mWordDetection.LoadWord(br, details);
                         Debug.Log(string.Format("LoadProfile: Loaded profile: {0}", label));
                         details.Label = label;
                     }
