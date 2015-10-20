@@ -299,7 +299,7 @@ public class Example18 : MonoBehaviour
 ```
     private WordDetails GetWord(string label)
     {
-        foreach (WordDetails details in AudioWordDetection.Words)
+        foreach (WordDetails details in _mWordDetection.Words)
         {
             if (null == details)
             {
@@ -631,7 +631,7 @@ The word detection API provides a callback event for detected words.
 
 ```
         //subscribe detection event
-        AudioWordDetection.WordDetectedEvent += WordDetectedHandler;
+        _mWordDetection.WordDetectedEvent += WordDetectedHandler;
 ```
 
 ## Detected Word Score
