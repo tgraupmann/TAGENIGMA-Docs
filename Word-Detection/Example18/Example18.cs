@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class Example18 : MonoBehaviour
 {
@@ -139,29 +139,7 @@ public class Example18 : MonoBehaviour
     /// <param name="details"></param>
     private void SetupProfile(WordDetails details)
     {
-        int size = details.Wave.Length;
-        int halfSize = size / 2;
-
-        //allocate profile spectrum, real
-        if (null == details.SpectrumReal ||
-            details.SpectrumReal.Length != halfSize)
-        {
-            details.SpectrumReal = new float[halfSize];
-        }
-
-        //allocate profile spectrum, imaginary
-        if (null == details.SpectrumImag ||
-            details.SpectrumImag.Length != halfSize)
-        {
-            details.SpectrumImag = new float[halfSize];
-        }
-
-        //get the spectrum for the trimmed word
-        if (null != details.Wave &&
-            details.Wave.Length > 0)
-        {
-            _mSpectrumMicrophone.GetSpectrumData(details.Wave, details.SpectrumReal, details.SpectrumImag, FFTWindow.Rectangular);
-        }
+        _mWordDetection.LoadWord(_mMicrophoneData, 1, _mSpectrumMicrophone.SampleRate, details);
     }
 
     /// <summary>
@@ -237,6 +215,7 @@ public class Example18 : MonoBehaviour
     {
         GUILayout.Label(string.Format("Select a microphone: count={0}", Microphone.devices.Length));
 
+        int i = 0;
         foreach (string device in Microphone.devices)
         {
             if (string.IsNullOrEmpty(device))
@@ -246,8 +225,9 @@ public class Example18 : MonoBehaviour
 
             if (GUILayout.Button(device, GUILayout.Height(60)))
             {
-                _mSpectrumMicrophone.DeviceName = device;
+                _mSpectrumMicrophone.DeviceIndex = i;
             }
+            ++i;
         }
     }
 
@@ -256,7 +236,7 @@ public class Example18 : MonoBehaviour
     /// </summary>
     void OnGUI()
     {
-        if (string.IsNullOrEmpty(_mSpectrumMicrophone.DeviceName))
+        if (_mSpectrumMicrophone.DeviceIndex < 0)
         {
             ShowMicrophoneSelector();
             return;
