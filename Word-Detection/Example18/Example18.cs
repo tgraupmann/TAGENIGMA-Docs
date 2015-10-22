@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityWordDetection;
 
 public class Example18 : MonoBehaviour
 {
@@ -218,14 +219,21 @@ public class Example18 : MonoBehaviour
         int i = 0;
         foreach (string device in Microphone.devices)
         {
-            if (string.IsNullOrEmpty(device))
+            string deviceName = device;
+            string displayName = device;
+            if (string.IsNullOrEmpty(displayName))
             {
-                continue;
+                displayName = "Unknown";
             }
 
-            if (GUILayout.Button(device, GUILayout.Height(60)))
+            displayName = string.Format("{0} {1}", i, displayName);
+
+            if (GUILayout.Button(displayName, GUILayout.Height(60)))
             {
-                _mSpectrumMicrophone.DeviceIndex = i;
+                WordDetectionMicrophone wordDetectionMicrophone = new WordDetectionMicrophone();
+                wordDetectionMicrophone._mDeviceName = device;
+                wordDetectionMicrophone._mDisplayName = displayName;
+                _mSpectrumMicrophone._mWordDetectionMicrophone = wordDetectionMicrophone;
             }
             ++i;
         }
@@ -236,7 +244,7 @@ public class Example18 : MonoBehaviour
     /// </summary>
     void OnGUI()
     {
-        if (_mSpectrumMicrophone.DeviceIndex < 0)
+        if (null == _mSpectrumMicrophone._mWordDetectionMicrophone)
         {
             ShowMicrophoneSelector();
             return;
