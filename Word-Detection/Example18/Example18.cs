@@ -219,7 +219,6 @@ public class Example18 : MonoBehaviour
         int i = 0;
         foreach (string device in Microphone.devices)
         {
-            string deviceName = device;
             string displayName = device;
             if (string.IsNullOrEmpty(displayName))
             {
