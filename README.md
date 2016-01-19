@@ -15,7 +15,7 @@ Documentation for TAGENIGMA LLC Products
 
 * [Scene-Merge](Scene-Merge.md)
 
-* [Setup-For-Fuse-CC](Setup-For-Fuse-CC) 
+* [Setup-For-Fuse-CC](Setup-For-Fuse-CC.md) 
 
 * [Standalone-Plugin-Maker](Standalone-Plugin-Maker.md)
 
