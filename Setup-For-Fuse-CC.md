@@ -10,7 +10,7 @@ Publisher: <a target=_blank href="http://tagenigma.com/blog">[TAGENIGMA Blog]</a
 Feedback
 --------
 
-Send your questions, feedback, or feature requests to [support@theylovegames.com](mailto:support@theylovegames.com)
+Send your questions, feedback, or feature requests to [support@theylovegames.com](mailto:support@theylovegames.com).
 
 
 Audience
@@ -54,6 +54,8 @@ To enable support, add `RAIN_AI` to the [Platform Custom Defines](http://docs.un
 
 After support is enabled, `Fuse` submenu items will appear within the `RAIN` menu.
 
+![image_2](Setup-For-Fuse-CC/image_2.png)
+
 
 Enable UFPS : Ultimate FPS
 --------------------------
@@ -65,6 +67,8 @@ The `UFPS` package must be imported before support is enabled.
 To enable support, add `UFPS` to the [Platform Custom Defines](http://docs.unity3d.com/Manual/PlatformDependentCompilation.html).
 
 After support is enabled, `UFPS` submenu items will appear within the `Fuse` menu.
+
+![image_2](Setup-For-Fuse-CC/image_1.png)
 
 
 Example Scenes
@@ -101,4 +105,4 @@ Change Log
 Q & A
 -----
 
-You can send comments/questions to support@theylovegames.com where your feedback will help us create new tutorials and features in order to improve the product.
+You can send comments/questions to [support@theylovegames.com](mailto:support@theylovegames.com) where your feedback will help us create new tutorials and features in order to improve the product.
