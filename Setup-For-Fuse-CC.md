@@ -118,6 +118,10 @@ Terrain provides a floor to walk on. Obstacles are a set of cubes shaped like bu
 
 ![image_5](Setup-For-Fuse-CC/image_5.png)
 
+The menu item `Fuse->Create [UFPS Player]` creates a UFPS player with a `Visual Aspect` for `NavMesh Agents` to sense. The `UFPS` player has a `first-person` controller and is capable of running around the obstacle course. The `UFPS` has the damage handlers, colliders, and a starting inventory already setup.
+
+![image_6](Setup-For-Fuse-CC/image_6.png)
+
 ## RAIN AI for Unity
 
 
