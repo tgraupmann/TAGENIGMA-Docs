@@ -203,6 +203,18 @@ The menu item `Fuse->Setup NavMesh [UFPS Enemy] Scary Zombie Pack` should only b
 ![image_12](Setup-For-Fuse-CC/image_12.png)
 
 
+#### NavMesh Agent Patrols
+
+At this point, the `NavMesh Agents` will cycle between their respective waypoints.
+
+![image_16](Setup-For-Fuse-CC/image_16.gif)
+
+
+If the `NavMesh Agents` sense a `Visual Aspect` they will chase and attack their target.
+
+![image_17](Setup-For-Fuse-CC/image_17.gif)
+
+
 ## RAIN AI for Unity
 ---
 
