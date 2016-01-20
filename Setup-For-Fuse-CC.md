@@ -30,6 +30,10 @@ This package is targeted for Unity 5.3.1 or better.
 
 This package extends the Unity editor.
 
+This package is compatible with [Adobe Fuse CC](http://www.adobe.com/products/fuse.html).
+
+This package is compatible with animated models from [Mixamo](http://mixamo.com).
+
 This package is compatible with [RAIN AI for Unity](https://www.assetstore.unity3d.com/en/#!/content/23569). 
 
 This package is compatible with [UFPS : Ultimate FPS](https://www.assetstore.unity3d.com/en/#!/content/2943).
@@ -102,6 +106,27 @@ To enable support, add `UFPS` to the [Platform Custom Defines](http://docs.unity
 After support is enabled, `UFPS` submenu items will appear within the `Fuse` menu.
 
 ![image_2](Setup-For-Fuse-CC/image_1.png)
+
+
+## Fuse CC
+---
+
+This package supports models created in [Adobe Fuse CC](http://www.adobe.com/products/fuse.html). `Fuse CC` is part of `Adobe Creative Cloud`. Design a character and then click the `Save to Mixamo` button to upload the character to the `Mixamo` website for auto-rigging and animation retargeting.
+
+![image_14](Setup-For-Fuse-CC/image_14.png)
+
+
+## Mixamo
+---
+
+[Mixamo](http://mixamo.com) has a collection of characters that can be animated with animation packs and then downloaded into `Unity`.
+
+
+### Scary Animation Pack
+
+This package supports `Mixamo` models that have the `Scary Animation Pack` applied. Be sure to check the `In Place` option for the animations in the pack to maximize compatibility.
+
+![image_15](Setup-For-Fuse-CC/image_15.png)
 
 
 ## Unity Built-in NavMesh Agents
