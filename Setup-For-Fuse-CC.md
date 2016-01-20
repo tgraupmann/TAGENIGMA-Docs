@@ -53,7 +53,15 @@ You will find detailed tutorial videos on our YouTube channel in the [Setup For 
  <td>Adobe Fuse CC to Unity UFPS (00:16:15)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=L9MCGwRTlbY" target="_blank">
 <img src="http://img.youtube.com/vi/L9MCGwRTlbY/0.jpg" alt="Adobe Fuse CC to Unity UFPS" width="240" height="180" border="10" /></a></td>
- <td></td>
+ <td>Mixamo to Unity (00:02:11)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=e5WgVEkMk3g" target="_blank">
+<img src="http://img.youtube.com/vi/e5WgVEkMk3g/0.jpg" alt="Mixamo to Unity" width="240" height="180" border="10" /></a></td>
+ </tr>
+ <tr>
+ <td>Import RAIN AI for Unity into Unity (00:00:56)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=r8BoYJPc84E" target="_blank">
+<img src="http://img.youtube.com/vi/r8BoYJPc84E/0.jpg" alt="Import RAIN AI for Unity into Unity" width="240" height="180" border="10" /></a></td>
+<td></td>
  </tr>
 </table>
 
@@ -146,7 +154,7 @@ If the `Mixamo` character has an existing `Animator Controller` the editor will 
 ![image_9](Setup-For-Fuse-CC/image_9.png)
 
 
-A `GameObject` named `NavMeshAgents` will be added to the scene, if missing, which holds the templates for `NavMesh Agents` that will be spawned. A `GameObject` named `NavMeshAgentSpawners` will be added to the scene, if missing, which holds the spawner instances for the `NavMesh Agents`. The spawners control the rate at which the agents are spawned. New agents will be spawned at the spawner locations. Templates should be deactivated before hitting play. A template might become unspawnable if it gets destroyed by dying if it was accidentally activated in play mode.
+A `GameObject` named `NavMeshAgents` will be added to the scene, if missing, which holds the templates for `NavMesh Agents` that will be spawned. A `GameObject` named `NavMeshAgentSpawners` will be added to the scene, if missing, which holds the spawner instances for the `NavMesh Agents`. The spawners control the rate at which the agents are spawned. New agents will be spawned at the spawner locations. Templates should be deactivated before hitting play. A template might become unspawnable if it gets destroyed by dying if it was accidentally activated in `PLAY` mode.
 
 ![image_10](Setup-For-Fuse-CC/image_10.png)
 
