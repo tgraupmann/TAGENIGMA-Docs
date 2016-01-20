@@ -97,6 +97,7 @@ After support is enabled, `UFPS` submenu items will appear within the `Fuse` men
 
 
 ## Unity Built-in NavMesh Agents
+---
 
 ### Getting Started
 
@@ -121,7 +122,7 @@ Terrain provides a floor to walk on. Obstacles are a set of cubes shaped like bu
 
 #### Setup the UFPS Player
 
-The menu item `Fuse->Setup NavMesh [UFPS Player]` is only available when `UFPS` is enabled. The menu item creates a UFPS player with a `Visual Aspect` for `NavMesh Agents` to sense. The `UFPS` player has a `first-person` controller and is capable of running around the obstacle course. The `UFPS` has the damage handlers, colliders, and a starting inventory already setup. Since `UFPS` players have their own cameras, the default `Main Camera` is disabled.
+The menu item `Fuse->Setup NavMesh [UFPS Player]` is only available when `UFPS` is enabled. The menu item creates a `UFPS` player with a `Visual Aspect` for `NavMesh Agents` to sense. The `UFPS` player has a `first-person` controller and is capable of running around the obstacle course. The `UFPS` has the damage handlers, colliders, and a starting inventory already setup. Since `UFPS` players have their own cameras, the default `Main Camera` is disabled. At this point, the player can run around the scene and shoot.
 
 ![image_6](Setup-For-Fuse-CC/image_6.png)
 
@@ -134,6 +135,7 @@ The menu item `Fuse->Setup NavMesh [Player] Visual Aspect` adds a `Visual Aspect
 
 
 ## RAIN AI for Unity
+---
 
 
 #### Create a New Scene
