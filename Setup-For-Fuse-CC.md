@@ -118,9 +118,14 @@ Terrain provides a floor to walk on. Obstacles are a set of cubes shaped like bu
 
 ![image_5](Setup-For-Fuse-CC/image_5.png)
 
-The menu item `Fuse->Create [UFPS Player]` creates a UFPS player with a `Visual Aspect` for `NavMesh Agents` to sense. The `UFPS` player has a `first-person` controller and is capable of running around the obstacle course. The `UFPS` has the damage handlers, colliders, and a starting inventory already setup.
+The menu item `Fuse->Setup NavMesh [UFPS Player]` is only available when `UFPS` is enabled. The menu item creates a UFPS player with a `Visual Aspect` for `NavMesh Agents` to sense. The `UFPS` player has a `first-person` controller and is capable of running around the obstacle course. The `UFPS` has the damage handlers, colliders, and a starting inventory already setup. Since `UFPS` players have their own cameras, the default `Main Camera` is disabled.
 
 ![image_6](Setup-For-Fuse-CC/image_6.png)
+
+The menu item `Fuse->Setup NavMesh [Player] Visual Aspect` adds a `Visual Aspect` to the player so that `NavMesh Agents` can detect the player. This can be used on `UFPS` players or generically on something like the `Standard Assets` where a `Character Controller` was used. A `Visual Aspect` will work for a `first-person` or `third-person` perspective controller.
+
+![image_7](Setup-For-Fuse-CC/image_7.png)
+
 
 ## RAIN AI for Unity
 
