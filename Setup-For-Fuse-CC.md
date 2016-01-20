@@ -144,7 +144,7 @@ The menu item `Fuse->Setup NavMesh [Player] Visual Aspect` adds a `Visual Aspect
 
 #### Setup NavMesh Agents With Scary Zombie Pack
 
-The menu item `Fuse->Setup NavMesh [Agent] Scary Zombie Pack` can only be used when the main `Mixamo` character model is selected. The menu item will automatically generate an `Animator Controller` for the `Mixamo` character that is compatible with the `Scary Zombie Pack` from `Mixamo`. The `Animator Controller` will be created in the same folder as the `Mixamo` character.
+The menu item `Fuse->Setup NavMesh [Agent] Scary Zombie Pack` can only be used when the main `Mixamo` character model is selected. The menu item will automatically generate an `Animator Controller` for the `Mixamo` character that is compatible with the `Scary Zombie Pack` from `Mixamo`. The `Animator Controller` will be created in the same folder as the `Mixamo` character. The menu item will apply some material fixes on the `Mixamo` model.
 
 ![image_8](Setup-For-Fuse-CC/image_8.png)
 
@@ -166,7 +166,7 @@ When the `Animator Controller` was generated, the menu item automatically scanne
 
 #### Setup NavMesh Agent Templates
 
-The menu item `Fuse->Setup NavMesh [Enemy] Scary Zombie Pack` should only be run on a `NavMesh Agent` template. The menu item adds a `Visual Sensor` so that a `Zombie` can find the `Player`. The menu item also adds a `Capsule Collider` to the spine of the `NavMesh Agent`. The below image has the template enabled only for documentation purposes. `NavMesh Agent` templates should be deactivated to be used properly. 
+The menu item `Fuse->Setup NavMesh [Enemy] Scary Zombie Pack` should only be run on a `NavMesh Agent` template. The menu item performs a subset of setup tasks from the previous item, excluding generating the `Animator Controller`, excluding the material fixes, and excluding creating the spawn items. The menu item adds a `Visual Sensor` so that a `Zombie` can find the `Player`. The menu item also adds a `Capsule Collider` to the spine of the `NavMesh Agent`. The below image has the template enabled only for documentation purposes. `NavMesh Agent` templates should be deactivated to be used properly. 
 
 ![image_11](Setup-For-Fuse-CC/image_11.png)
 
