@@ -134,6 +134,23 @@ The menu item `Fuse->Setup NavMesh [Player] Visual Aspect` adds a `Visual Aspect
 ![image_7](Setup-For-Fuse-CC/image_7.png)
 
 
+#### Setup NavMesh Agents With Scary Zombie Pack
+
+The menu item `Fuse->Setup NavMesh [Agent] Scary Zombie Pack` can only be used when the main `Mixamo` character model is selected. The menu item will automatically generate an `Animator Controller` for the `Mixamo` character that is compatible with the `Scary Zombie Pack` from `Mixamo`. The `Animator Controller` will be created in the same folder as the `Mixamo` character.
+
+![image_8](Setup-For-Fuse-CC/image_8.png)
+
+
+If the `Mixamo` character has an existing `Animator Controller` the editor will prompt before replacing it.
+
+![image_9](Setup-For-Fuse-CC/image_9.png)
+
+
+A `GameObject` named `NavMeshAgents` will be added to the scene, if missing, which holds the templates for `NavMesh Agents` that will be spawned. A `GameObject` named `NavMeshAgentSpawners` will be added to the scene, if missing, which holds the spawner instances for the `NavMesh Agents`. The spawners control the rate at which the agents are spawned. New agents will be spawned at the spawner locations.
+
+![image_10](Setup-For-Fuse-CC/image_10.png)
+
+
 ## RAIN AI for Unity
 ---
 
