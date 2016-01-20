@@ -159,10 +159,19 @@ A `GameObject` named `NavMeshAgents` will be added to the scene, if missing, whi
 ![image_10](Setup-For-Fuse-CC/image_10.png)
 
 
+When the `Animator Controller` was generated, the menu item automatically scanned the Mixamo model animations to automatically create all the state transitions. The menu item also auto generated the `Mechanim` parameters used in the state diagram. The `Animator Controller` is already properly referenced by the `NavMesh Agent`.
+
+![image_13](Setup-For-Fuse-CC/image_13.png)
+
+
+#### Setup NavMesh Agent Templates
+
 The menu item `Fuse->Setup NavMesh [Enemy] Scary Zombie Pack` should only be run on a `NavMesh Agent` template. The menu item adds a `Visual Sensor` so that a `Zombie` can find the `Player`. The menu item also adds a `Capsule Collider` to the spine of the `NavMesh Agent`. The below image has the template enabled only for documentation purposes. `NavMesh Agent` templates should be deactivated to be used properly. 
 
 ![image_11](Setup-For-Fuse-CC/image_11.png)
 
+
+#### Setup NavMesh Agents for UFPS
 
 The menu item `Fuse->Setup NavMesh [UFPS Enemy] Scary Zombie Pack` should only be run on a `NavMesh Agent` template. The menu item adds a `Damage Handler` so that the `Zombie` can be damaged by the `UFPS Player`. The menu item will only display if `UFPS` is enabled. The below image has the template enabled only for documentation purposes. `NavMesh Agent` templates should be deactivated to be used properly. 
 
