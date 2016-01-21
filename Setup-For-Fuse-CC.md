@@ -65,7 +65,17 @@ You will find detailed tutorial videos on our YouTube channel in the [Setup For 
  <td>Import RAIN AI for Unity into Unity (00:00:56)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=r8BoYJPc84E" target="_blank">
 <img src="http://img.youtube.com/vi/r8BoYJPc84E/0.jpg" alt="Import RAIN AI for Unity into Unity" width="240" height="180" border="10" /></a></td>
-<td></td>
+ <td>Set up a Waypoint Route in RAIN AI for Unity (00:08:24)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=30rb5Ihphx4" target="_blank">
+<img src="http://img.youtube.com/vi/30rb5Ihphx4/0.jpg" alt="Set up a Waypoint Route in RAIN AI for Unity" width="240" height="180" border="10" /></a></td>
+ </tr>
+ <tr>
+ <td>Mixamo to Rain AI For Unity Waypoint Routes (00:03:49)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=mLWW4GwG3Pw" target="_blank">
+<img src="http://img.youtube.com/vi/mLWW4GwG3Pw/0.jpg" alt="Mixamo to Rain AI For Unity Waypoint Routes" width="240" height="180" border="10" /></a></td>
+ <td>Quick RAIN Setup for Mixamo with Scary Zombie Pack AI (00:04:39)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=h1cVxDnAUlE" target="_blank">
+<img src="http://img.youtube.com/vi/h1cVxDnAUlE/0.jpg" alt="Quick RAIN Setup for Mixamo with Scary Zombie Pack AI" width="240" height="180" border="10" /></a></td>
  </tr>
 </table>
 
