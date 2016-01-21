@@ -77,6 +77,12 @@ You will find detailed tutorial videos on our YouTube channel in the [Setup For 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=h1cVxDnAUlE" target="_blank">
 <img src="http://img.youtube.com/vi/h1cVxDnAUlE/0.jpg" alt="Quick RAIN Setup for Mixamo with Scary Zombie Pack AI" width="240" height="180" border="10" /></a></td>
  </tr>
+ <tr>
+ <td>Scary Zombie Pack AI - Mixamo / Rain AI / UFPS Setup Automation (00:03:22)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=7YdKXNHtlJI" target="_blank">
+<img src="http://img.youtube.com/vi/7YdKXNHtlJI/0.jpg" alt="Scary Zombie Pack AI - Mixamo / Rain AI / UFPS Setup Automation" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
 </table>
 
 
