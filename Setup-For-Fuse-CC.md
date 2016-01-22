@@ -268,6 +268,13 @@ Select `Navigation Mesh` in the scene and click the `Generate Navigation Mesh` b
 ![image_20](Setup-For-Fuse-CC/image_20.png)
 
 
+#### RAIN - Setup the UFPS Player
+
+The menu item `RAIN->Setup RAIN [UFPS Player]` is only available when `UFPS` is enabled. The menu item creates a `UFPS` player with a `Visual Aspect` for `RAIN Agents` to sense. The `UFPS` player has a `first-person` controller and is capable of running around the obstacle course. The `UFPS` has the damage handlers, colliders, and a starting inventory already setup. Since `UFPS` players have their own cameras, the default `Main Camera` is disabled. At this point, the player can run around the scene and shoot.
+
+![image_21](Setup-For-Fuse-CC/image_21.png)
+
+
 ## Change Log
 ---
 
