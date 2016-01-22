@@ -235,30 +235,35 @@ If the `NavMesh Agents` sense a `Visual Aspect` they will chase and attack their
 ---
 
 
-#### Create a New Scene
+#### RAIN - Create a New Scene
 
 Start with a new scene and save the scene.
 
 ![image_3](Setup-For-Fuse-CC/image_3.png)
 
 
-#### Add Ground Layer
+#### RAIN - Tags
+
+Add custom tags for `Obstacle` and `Player` that the `Navigation Mesh` will use.
+
+
+#### RAIN - Add Ground Layer
 
 The ground layer will be used on raycasts to ignore the ground layer.
 
 ![image_18](Setup-For-Fuse-CC/image_18.png)
 
 
-#### Create Waypoint Obstacles
+#### RAIN - Create Waypoint Obstacles
 
 The menu item `RAIN->Setup RAIN [Waypoint Obstacles]` automatically creates a terrain with obstacles and waypoints. Obstacles show that the `RAIN Agents` can navigate the `Navigation Mesh` while patrolling a set of `Waypoints`.
 
 ![image_19](Setup-For-Fuse-CC/image_19.png)
 
 
-#### Generate Navigation Mesh
+#### RAIN - Generate Navigation Mesh
 
-Select `Navigation Mesh` in the scene and click the `Generate Navigation Mesh` button in the inspector. `RAIN` will generate a navigation mesh that considers the buildings as `unwalkable areas`.
+Select `Navigation Mesh` in the scene and click the `Generate Navigation Mesh` button in the inspector. `RAIN` generates a `Navigation Mesh` that ignores `Player` tags and marks `Obstacle` tags as `unwalkable areas`.
 
 ![image_20](Setup-For-Fuse-CC/image_20.png)
 
