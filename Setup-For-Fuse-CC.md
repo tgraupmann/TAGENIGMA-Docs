@@ -275,6 +275,13 @@ The menu item `RAIN->Setup RAIN [UFPS Player]` is only available when `UFPS` is 
 ![image_21](Setup-For-Fuse-CC/image_21.png)
 
 
+#### RAIN - Setup the Player
+
+The menu item `RAIN->Setup RAIN [Player] Visual Aspect` adds a `Visual Aspect` to the player so that `RAIN Agents` can detect the player. This can be used on `UFPS` players or generically on something like the `Standard Assets` where a `Character Controller` was used. A `Visual Aspect` will work for a `first-person` or `third-person` perspective controller.
+
+![image_22](Setup-For-Fuse-CC/image_22.png)
+
+
 ## Change Log
 ---
 
