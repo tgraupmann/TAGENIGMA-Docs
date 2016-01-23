@@ -282,7 +282,7 @@ The menu item `RAIN->Setup RAIN [Player] Visual Aspect` adds a `Visual Aspect` t
 ![image_22](Setup-For-Fuse-CC/image_22.png)
 
 
-#### RAIN Setup RAIN Agents With Scary Zombie Pack
+#### RAIN - Setup RAIN Agents With Scary Zombie Pack
 
 The menu item `RAIN->Setup RAIN [Agent] Scary Zombie Pack` can only be used when the main `Mixamo` character model is selected. The menu item will automatically generate an `Animator Controller` for the `Mixamo` character that is compatible with the `Scary Zombie Pack` from `Mixamo`. The `Animator Controller` will be created in the same folder as the `Mixamo` character. The menu item will apply some material fixes on the `Mixamo` model.
 
