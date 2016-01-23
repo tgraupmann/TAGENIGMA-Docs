@@ -282,6 +282,42 @@ The menu item `RAIN->Setup RAIN [Player] Visual Aspect` adds a `Visual Aspect` t
 ![image_22](Setup-For-Fuse-CC/image_22.png)
 
 
+#### RAIN Setup RAIN Agents With Scary Zombie Pack
+
+The menu item `RAIN->Setup RAIN [Agent] Scary Zombie Pack` can only be used when the main `Mixamo` character model is selected. The menu item will automatically generate an `Animator Controller` for the `Mixamo` character that is compatible with the `Scary Zombie Pack` from `Mixamo`. The `Animator Controller` will be created in the same folder as the `Mixamo` character. The menu item will apply some material fixes on the `Mixamo` model.
+
+![image_23](Setup-For-Fuse-CC/image_23.png)
+
+
+If the `Mixamo` character has an existing `Animator Controller` the editor will prompt before replacing it.
+
+![image_9](Setup-For-Fuse-CC/image_9.png)
+
+
+A `GameObject` named `RAINAgents` will be added to the scene, if missing, which holds the templates for `RAIN Agents` that will be spawned. A `GameObject` named `RAINAgentSpawners` will be added to the scene, if missing, which holds the spawner instances for the `RAIN Agents`. The spawners control the rate at which the agents are spawned. New agents will be spawned at the spawner locations. Templates should be deactivated before hitting play. A template might become unspawnable if it gets destroyed by dying if it was accidentally activated in `PLAY` mode.
+
+![image_26](Setup-For-Fuse-CC/image_26.png)
+
+
+When the `Animator Controller` was generated, the menu item automatically scanned the Mixamo model animations to automatically create all the state transitions. The menu item also auto generated the `Mechanim` parameters used in the state diagram. The `Animator Controller` is already properly referenced by the `NavMesh Agent`.
+
+![image_13](Setup-For-Fuse-CC/image_13.png)
+
+
+#### RAIN - Setup RAIN Agents for UFPS
+
+The menu item `RAIN->Setup RAIN [UFPS Enemy] Scary Zombie Pack` should only be run on a `RAIN Agent` template. The menu item adds a `Damage Handler` so that the `Zombie` can be damaged by the `UFPS Player`. The menu item will only display if `UFPS` is enabled. The below image has the template enabled only for documentation purposes. `RAIN Agent` templates should be deactivated to be used properly.
+
+![image_24](Setup-For-Fuse-CC/image_24.png)
+
+
+#### RAIN - RAIN Agent Patrols
+
+At this point, the `RAIN Agents` will cycle between their respective waypoints. The player will be chased and attacked if the `RAIN Agent` senses the player. The `RAIN Behaviour Editor` will show the active `RAIN` state in the `Behaviour Tree` when the `RAIN Agent` is selected in the inspector.
+
+![image_25](Setup-For-Fuse-CC/image_25.png)
+
+
 ## Change Log
 ---
 
