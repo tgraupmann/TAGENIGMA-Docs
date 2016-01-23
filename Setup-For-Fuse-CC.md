@@ -96,7 +96,26 @@ Example Scene `RainUFPSWaypoints` - This example scene shows `RAIN` characters r
 Example Scene `NavMeshUFPSWaypoints` - This example scene shows `NavMesh Agents`  running around a terrain with obstacles and cycling between waypoints. `NavMesh Agents` have a `Visual Sensor` and will detect players with a `Visual Aspect`. `NavMesh Agents` chase the player while in visual range. `NavMesh Agents` will attack the player when close enough. `UFPS` must be imported and enabled before opening this scene.
 
 
-## Enable RAIN AI for Unity
+## Dependencies
+
+Before opening the example scenes, be sure to enable `UFPS` and/or `RAIN` as applicable.
+
+Some layers and tags are needed before opening the example scenes.
+
+
+### Layers
+
+Be sure to add a `Ground` layer.
+
+![image_18](Setup-For-Fuse-CC/image_18.png)
+
+
+### Tags
+
+Add the custom tags for `Obstacle` and `Player` that the `RAIN` example scene will use.
+
+
+### Enable RAIN AI for Unity
 ---
 
 This package is compatible with [RAIN AI for Unity](https://www.assetstore.unity3d.com/en/#!/content/23569). 
@@ -110,7 +129,7 @@ After support is enabled, `Fuse` submenu items will appear within the `RAIN` men
 ![image_2](Setup-For-Fuse-CC/image_2.png)
 
 
-## Enable UFPS : Ultimate FPS
+### Enable UFPS : Ultimate FPS
 ---
 
 This package is compatible with [UFPS : Ultimate FPS](https://www.assetstore.unity3d.com/en/#!/content/2943).
