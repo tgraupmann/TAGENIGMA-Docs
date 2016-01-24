@@ -105,14 +105,14 @@ Some layers and tags are needed before opening the example scenes.
 
 ### Layers
 
-Be sure to add a `Ground` layer.
+Be sure that the layers exist for `Ground` and `Enemy`.
 
 ![image_18](Setup-For-Fuse-CC/image_18.png)
 
 
 ### Tags
 
-Add the custom tags for `Obstacle` and `Player` that the `RAIN` example scene will use.
+Be sure that the tags exist for `Obstacle` and `Player` that the `RAIN` example scene will use.
 
 
 ### Enable RAIN AI for Unity
@@ -335,6 +335,153 @@ The menu item `RAIN->Setup RAIN [UFPS Enemy] Scary Zombie Pack` should only be r
 At this point, the `RAIN Agents` will cycle between their respective waypoints. The player will be chased and attacked if the `RAIN Agent` senses the player. The `RAIN Behaviour Editor` will show the active `RAIN` state in the `Behaviour Tree` when the `RAIN Agent` is selected in the inspector.
 
 ![image_25](Setup-For-Fuse-CC/image_25.png)
+
+
+## Bug Fixes
+
+Some 3rd party packages have some bug fixes yet to be published.
+
+
+### UFPS
+
+The following fixes correspond to `UFPS 1.5.2` and are due sometime in `February`.
+
+
+#### Cursor Handling
+
+In `UFPS`, pressing `ESC` exits FPS mode and shows the cursor in the editor. This fix gives better `Cursor` handling in Unity 5.3.1 on Windows 10. Here's an enhancement for the `LockCursor` property in `vp_Utility`.
+
+`Assets\UFPS\Base\Scripts\Core\Utility\vp_Utility.cs`
+
+```
+	/// <summary>
+	/// shows or hides the mouse cursor in a way suitable for the
+	/// current unity version
+	/// </summary>
+	public static bool LockCursor
+	{
+
+		// compile only for unity 5+
+		#if (!(UNITY_4_6 || UNITY_4_5 || UNITY_4_3 || UNITY_4_2 || UNITY_4_1 || UNITY_4_0 || UNITY_3_5))
+		get
+		{
+			return ((Cursor.lockState == CursorLockMode.Locked) ? true : false);
+		}
+		set
+		{
+			// toggling cursor visible and invisible is currently buggy in the Unity 5
+			// editor so we need to toggle brute force with custom arrow art
+			#if UNITY_EDITOR
+				Cursor.SetCursor((value ? InvisibleCursor : VisibleCursor), Vector2.zero, CursorMode.Auto);
+			#endif
+            // running in a build so toggling visibility should work fine
+			Cursor.visible = !value;
+			Cursor.lockState = (value ? CursorLockMode.Locked : CursorLockMode.None);
+		}
+#else
+		// compile only for unity 4.6 and older
+		get { return Screen.lockCursor; }
+		set { Screen.lockCursor = value; }
+#endif
+
+	}
+```
+
+
+#### Player Inventory Null Checking
+
+`UFPS` didn't expect some things to be called in edit mode. Here's a fix to add a null check in the player inventory script. Find the `Reset` method on `vp_PlayerInventory`.
+
+`Assets\UFPS\Base\Scripts\Gameplay\Player\vp_PlayerInventory.cs`
+
+```
+	/// <summary>
+	/// Reset the player inventory
+	/// </summary>
+	public override void Reset()
+	{
+
+		m_PreviouslyOwnedItems.Clear();
+		m_CurrentWeaponInstance = null;
+
+		if (null != m_Misc &&
+            !m_Misc.ResetOnRespawn)
+			return;
+
+		base.Reset();
+
+	}
+```
+
+
+#### Player Inventory Wield Null Checking
+
+Find the `TryWieldNewItem` method on `vp_PlayerInventory`.
+
+`Assets\UFPS\Base\Scripts\Gameplay\Player\vp_PlayerInventory.cs`
+
+```
+/// <summary>
+	/// Try to wield an item
+	/// </summary>
+	protected virtual void TryWieldNewItem(vp_ItemType type, bool alreadyHaveIt)
+	{
+
+		bool haveHadItBefore = m_PreviouslyOwnedItems.ContainsKey(type);
+		if (!haveHadItBefore)
+			m_PreviouslyOwnedItems.Add(type, null);
+
+		// --- see if we should try to wield a weapon because of this item pickup ---
+
+		if (null != m_AutoWield &&
+            m_AutoWield.Always)
+			goto tryWield;
+
+		if (null != m_AutoWield &&
+            m_AutoWield.IfUnarmed && (WeaponHandler.CurrentWeaponIndex < 1))
+			goto tryWield;
+
+		if (null != m_AutoWield &&
+            m_AutoWield.IfOutOfAmmo
+			&& (WeaponHandler.CurrentWeaponIndex > 0)
+			&& (WeaponHandler.CurrentWeapon.AnimationType != (int)vp_Weapon.Type.Melee)
+			&& m_Player.CurrentWeaponAmmoCount.Get() < 1)
+			goto tryWield;
+
+		if (null != m_AutoWield &&
+            m_AutoWield.IfNotPresent && !m_AutoWield.FirstTimeOnly && !alreadyHaveIt)
+			goto tryWield;
+
+		if (null != m_AutoWield &&
+            m_AutoWield.FirstTimeOnly && !haveHadItBefore)
+			goto tryWield;
+
+		return;
+
+	tryWield:
+
+		if ((type is vp_UnitBankType))
+			TryWield(GetItem(type));
+		else if (type is vp_UnitType)
+			TryWieldByUnit(type as vp_UnitType);
+		else if (type is vp_ItemType)	// tested last since the others derive from it
+			TryWield(GetItem(type));
+		else
+		{
+			System.Type baseType = type.GetType();
+			if (baseType == null)
+				return;
+			baseType = baseType.BaseType;
+			if ((baseType == typeof(vp_UnitBankType)))
+				TryWield(GetItem(type));
+			else if (baseType == typeof(vp_UnitType))
+				TryWieldByUnit(type as vp_UnitType);
+			else if (baseType == typeof(vp_ItemType))
+				TryWield(GetItem(type));
+		}
+		
+	}
+```
 
 
 ## Change Log
