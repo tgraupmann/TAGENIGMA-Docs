@@ -416,12 +416,12 @@ In `UFPS`, pressing `ESC` exits FPS mode and shows the cursor in the editor. Thi
 
 #### Player Inventory Wield Null Checking
 
-Find the `TryWieldNewItem` method on `vp_PlayerInventory`.
+Find the `TryWieldNewItem` method on `vp_PlayerInventory`. This adds missing null checks and notice this method uses the legendary `goto`.
 
 `Assets\UFPS\Base\Scripts\Gameplay\Player\vp_PlayerInventory.cs`
 
 ```
-/// <summary>
+	/// <summary>
 	/// Try to wield an item
 	/// </summary>
 	protected virtual void TryWieldNewItem(vp_ItemType type, bool alreadyHaveIt)
