@@ -5,9 +5,9 @@
 ## Quick Links
 ---
 
-[Setup For Fuse CC](https://www.assetstore.unity3d.com/en/#!/content/54366) is available in the Unity Asset Store.
+<a target="_blank" href="https://www.assetstore.unity3d.com/en/#!/content/54366">[Setup For Fuse CC]</a> is available in the Unity Asset Store.
 
-Publisher: <a target=_blank href="http://tagenigma.com/blog">[TAGENIGMA Blog]</a>
+Publisher: <a target="_blank" href="http://tagenigma.com/blog">[The Development Blog of Tim Graupmann]</a>
 
 
 ## Feedback
