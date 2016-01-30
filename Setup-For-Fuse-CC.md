@@ -1,8 +1,11 @@
 # Setup For Fuse CC
 ---
 
+
 ## Quick Links
 ---
+
+[Setup For Fuse CC](https://www.assetstore.unity3d.com/en/#!/content/54366) is available in the Unity Asset Store.
 
 Publisher: <a target=_blank href="http://tagenigma.com/blog">[TAGENIGMA Blog]</a>
 
@@ -421,7 +424,7 @@ Find the `TryWieldNewItem` method on `vp_PlayerInventory`. This adds missing nul
 `Assets\UFPS\Base\Scripts\Gameplay\Player\vp_PlayerInventory.cs`
 
 ```
-	/// <summary>
+    /// <summary>
 	/// Try to wield an item
 	/// </summary>
 	protected virtual void TryWieldNewItem(vp_ItemType type, bool alreadyHaveIt)
