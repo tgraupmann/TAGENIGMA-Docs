@@ -133,6 +133,10 @@ After support is enabled, `Oculus` submenu items will appear within the `Fuse` m
 
 ![image_27](Setup-For-Fuse-CC/image_27.png)
 
+Copy the `ProjectSettings.asset` from the `Oculus SDK` into your `ProjectSettings` folder to provide the resolutions needed for the `Oculus`. If this step is skipped, the `Editor` will crash on start.
+
+Copy the `InputManager.asset` from the `Oculus SDK`  into your `ProjectSettings` folder to provide support for a `wired XBOX 360 controller`. The left-stick will control movement. The right-stick will control the horizontal look.
+
 
 ### Enable RAIN AI for Unity
 ---
@@ -181,6 +185,18 @@ This package supports models created in [Adobe Fuse CC](http://www.adobe.com/pro
 This package supports `Mixamo` models that have the `Scary Animation Pack` applied. Be sure to check the `In Place` option for the animations in the pack to maximize compatibility.
 
 ![image_15](Setup-For-Fuse-CC/image_15.png)
+
+## Oculus Rift DK1
+
+Be sure to [enable Oculus](Setup-For-Fuse-CC.md#user-content-enable-oculus-rift-dk1).
+
+The menu item `Fuse->Set Oculus Rift DK1 [First Person Camera]` automatically creates the `OVRPlayerController GameObject` in the scene and sets up the main camera for the `Oculus`.
+
+![image_28](Setup-For-Fuse-CC/image_28.png)
+
+The `OVRPlayerController GameObject` has a default `Character Controller`, camera, and headtracking setup.
+
+![image_29](Setup-For-Fuse-CC/image_29.png)
 
 
 ## Unity Built-in NavMesh Agents
