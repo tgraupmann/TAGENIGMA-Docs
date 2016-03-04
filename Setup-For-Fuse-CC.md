@@ -37,6 +37,8 @@ This package is compatible with [Adobe Fuse CC](http://www.adobe.com/products/fu
 
 This package is compatible with animated models from [Mixamo](http://mixamo.com).
 
+This package is compatible with [Oculus Rift DK1](https://developer.oculus.com/downloads/game-engines/0.1.3.0-beta/Oculus_Utilities_for_Unity_5_SDK_Examples/).
+
 This package is compatible with [RAIN AI for Unity](https://www.assetstore.unity3d.com/en/#!/content/23569). 
 
 This package is compatible with [UFPS : Ultimate FPS](https://www.assetstore.unity3d.com/en/#!/content/2943).
@@ -101,7 +103,7 @@ Example Scene `NavMeshUFPSWaypoints` - This example scene shows `NavMesh Agents`
 
 ## Dependencies
 
-Before opening the example scenes, be sure to enable `UFPS` and/or `RAIN` as applicable.
+Before opening the example scenes, be sure to enable `Oculus` and/or `RAIN` and/or `UFPS` as applicable.
 
 Some layers and tags are needed before opening the example scenes.
 
@@ -116,6 +118,20 @@ Be sure that the layers exist for `Ground` and `Enemy`.
 ### Tags
 
 Be sure that the tags exist for `Obstacle` and `Player` that the `RAIN` example scene will use.
+
+
+### Enable Oculus Rift DK1
+---
+
+This package is compatible with [Oculus Utilities for Unity 5 SDK Examples](https://developer.oculus.com/downloads/game-engines/0.1.3.0-beta/Oculus_Utilities_for_Unity_5_SDK_Examples/).
+
+The `Oculus Utilities for Unity 5 SDK Examples` package must be imported before support is enabled.
+
+To enable support, add `OCULUS_RIFT_DK1` to the [Platform Custom Defines](http://docs.unity3d.com/Manual/PlatformDependentCompilation.html).
+
+After support is enabled, `Oculus` submenu items will appear within the `Fuse` menu.
+
+![image_27](Setup-For-Fuse-CC/image_27.png)
 
 
 ### Enable RAIN AI for Unity
@@ -143,7 +159,7 @@ To enable support, add `UFPS` to the [Platform Custom Defines](http://docs.unity
 
 After support is enabled, `UFPS` submenu items will appear within the `Fuse` menu.
 
-![image_2](Setup-For-Fuse-CC/image_1.png)
+![image_1](Setup-For-Fuse-CC/image_1.png)
 
 
 ## Fuse CC
