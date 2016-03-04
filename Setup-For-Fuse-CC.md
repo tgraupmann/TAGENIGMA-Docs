@@ -125,6 +125,8 @@ Be sure that the tags exist for `Obstacle` and `Player` that the `RAIN` example 
 
 This package is compatible with [Oculus Utilities for Unity 5 SDK Examples](https://developer.oculus.com/downloads/game-engines/0.1.3.0-beta/Oculus_Utilities_for_Unity_5_SDK_Examples/).
 
+The [Oculus Runtime for Windows](https://developer.oculus.com/downloads/pc/0.8.0.0-beta/Oculus_Runtime_for_Windows/) should be installed.
+
 The `Oculus Utilities for Unity 5 SDK Examples` package must be imported before support is enabled.
 
 To enable support, add `OCULUS_RIFT_DK1` to the [Platform Custom Defines](http://docs.unity3d.com/Manual/PlatformDependentCompilation.html).
@@ -197,6 +199,10 @@ The menu item `Fuse->Set Oculus Rift DK1 [First Person Camera]` automatically cr
 The `OVRPlayerController GameObject` has a default `Character Controller`, camera, and headtracking setup.
 
 ![image_29](Setup-For-Fuse-CC/image_29.png)
+
+After hitting `Play`, the scene should display in the `Oculus Rift DK1`, headtracking, and controller input should be working.
+
+![image_30](Setup-For-Fuse-CC/image_30.png)
 
 
 ## Unity Built-in NavMesh Agents
