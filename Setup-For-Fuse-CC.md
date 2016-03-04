@@ -535,3 +535,14 @@ Find the `TryWieldNewItem` method on `vp_PlayerInventory`. This adds missing nul
 ---
 
 You can send comments/questions to [support@theylovegames.com](mailto:support@theylovegames.com) where your feedback will help us create new tutorials and features in order to improve the product.
+
+
+## Roadmap
+---
+
+Upcoming Features:
+* VR setup automation.
+* Easy weapon setups
+* Don't show shells on player/enemy colliders
+* Support Pro Archer Animation Pack
+* Add Bows and Arrows
