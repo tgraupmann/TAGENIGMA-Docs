@@ -133,6 +133,12 @@ The `Oculus Utilities for Unity 5 SDK Examples` package must be imported before 
 
 To enable support, add `OCULUS_SDK` to the [Platform Custom Defines](http://docs.unity3d.com/Manual/PlatformDependentCompilation.html).
 
+Multiple `Platform Custom Defines` are supported and are separated with a semicolon while the order of the items are not important. I.e.
+
+```
+OCULUS_SDK;UFPS;RAIN_AI
+```
+
 After support is enabled, `Oculus` submenu items will appear within the `Fuse` menu.
 
 ![image_27](Setup-For-Fuse-CC/image_27.png)
@@ -151,6 +157,12 @@ The `RAIN AI for Unity` package must be imported before support is enabled.
 
 To enable support, add `RAIN_AI` to the [Platform Custom Defines](http://docs.unity3d.com/Manual/PlatformDependentCompilation.html).
 
+Multiple `Platform Custom Defines` are supported and are separated with a semicolon while the order of the items are not important. I.e.
+
+```
+OCULUS_SDK;UFPS;RAIN_AI
+```
+
 After support is enabled, `Fuse` submenu items will appear within the `RAIN` menu.
 
 ![image_2](Setup-For-Fuse-CC/image_2.png)
@@ -164,6 +176,12 @@ This package is compatible with [UFPS : Ultimate FPS](https://www.assetstore.uni
 The `UFPS` package must be imported before support is enabled.
 
 To enable support, add `UFPS` to the [Platform Custom Defines](http://docs.unity3d.com/Manual/PlatformDependentCompilation.html).
+
+Multiple `Platform Custom Defines` are supported and are separated with a semicolon while the order of the items are not important. I.e.
+
+```
+OCULUS_SDK;UFPS;RAIN_AI
+```
 
 After support is enabled, `UFPS` submenu items will appear within the `Fuse` menu.
 
@@ -387,7 +405,7 @@ Some 3rd party packages have some bug fixes yet to be published.
 
 ### UFPS
 
-The following fixes correspond to `UFPS 1.5.2` and are due sometime in `February`.
+UFPS has some bug fixes that have yet to be incorporated into the release version. The following fixes correspond to `UFPS 1.5.2` and `UFPS 1.6`.
 
 
 #### Cursor Handling
