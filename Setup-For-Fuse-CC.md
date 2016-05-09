@@ -465,7 +465,7 @@ In `UFPS`, pressing `ESC` exits FPS mode and shows the cursor in the editor. Thi
 		m_PreviouslyOwnedItems.Clear();
 		m_CurrentWeaponInstance = null;
 
-		if (null != m_Misc &&
+		if (null != m_Misc && //added missing null check
             !m_Misc.ResetOnRespawn)
 			return;
 
@@ -494,26 +494,26 @@ Find the `TryWieldNewItem` method on `vp_PlayerInventory`. This adds missing nul
 
 		// --- see if we should try to wield a weapon because of this item pickup ---
 
-		if (null != m_AutoWield &&
+		if (null != m_AutoWield && //added missing null check
             m_AutoWield.Always)
 			goto tryWield;
 
-		if (null != m_AutoWield &&
+		if (null != m_AutoWield && //added missing null check
             m_AutoWield.IfUnarmed && (WeaponHandler.CurrentWeaponIndex < 1))
 			goto tryWield;
 
-		if (null != m_AutoWield &&
+		if (null != m_AutoWield && //added missing null check
             m_AutoWield.IfOutOfAmmo
 			&& (WeaponHandler.CurrentWeaponIndex > 0)
 			&& (WeaponHandler.CurrentWeapon.AnimationType != (int)vp_Weapon.Type.Melee)
 			&& m_Player.CurrentWeaponAmmoCount.Get() < 1)
 			goto tryWield;
 
-		if (null != m_AutoWield &&
+		if (null != m_AutoWield && //added missing null check
             m_AutoWield.IfNotPresent && !m_AutoWield.FirstTimeOnly && !alreadyHaveIt)
 			goto tryWield;
 
-		if (null != m_AutoWield &&
+		if (null != m_AutoWield && //added missing null check
             m_AutoWield.FirstTimeOnly && !haveHadItBefore)
 			goto tryWield;
 
