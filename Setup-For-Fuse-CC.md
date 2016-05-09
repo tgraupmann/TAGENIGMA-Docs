@@ -530,7 +530,7 @@ Find the `TryWieldNewItem` method on `vp_PlayerInventory`. This adds missing nul
 		else
 		{
 			System.Type baseType = type.GetType();
-			if (baseType == null)
+			if (baseType == null) //added missing null check
 				return;
 			baseType = baseType.BaseType;
 			if ((baseType == typeof(vp_UnitBankType)))
