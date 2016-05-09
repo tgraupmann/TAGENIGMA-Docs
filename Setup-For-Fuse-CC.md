@@ -120,8 +120,10 @@ Be sure that the layers exist for `Ground` and `Enemy`.
 Be sure that the tags exist for `Obstacle` and `Player` that the `RAIN` example scene will use.
 
 
-### Enable Oculus Rift DK1
+### Enable VR Headsets
 ---
+
+This package has been tested with the `Oculus DK1` and `Samsung GearVR`.
 
 This package is compatible with [Oculus Utilities for Unity 5 SDK Examples](https://developer.oculus.com/downloads/game-engines/0.1.3.0-beta/Oculus_Utilities_for_Unity_5_SDK_Examples/).
 
@@ -129,7 +131,7 @@ The [Oculus Runtime for Windows](https://developer.oculus.com/downloads/pc/0.8.0
 
 The `Oculus Utilities for Unity 5 SDK Examples` package must be imported before support is enabled.
 
-To enable support, add `OCULUS_RIFT_DK1` to the [Platform Custom Defines](http://docs.unity3d.com/Manual/PlatformDependentCompilation.html).
+To enable support, add `OCULUS_SDK` to the [Platform Custom Defines](http://docs.unity3d.com/Manual/PlatformDependentCompilation.html).
 
 After support is enabled, `Oculus` submenu items will appear within the `Fuse` menu.
 
