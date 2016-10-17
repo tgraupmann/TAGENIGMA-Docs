@@ -265,7 +265,7 @@ The menu item `Fuse->Setup NavMesh [Player] Visual Aspect` adds a `Visual Aspect
 
 #### Setup NavMesh Agents With Scary Zombie Pack
 
-The menu item `Fuse->Setup NavMesh [Agent] Scary Zombie Pack` can only be used when the main `Mixamo` character model is selected. The menu item will automatically generate an `Animator Controller` for the `Mixamo` character that is compatible with the `Scary Zombie Pack` from `Mixamo`. The `Animator Controller` will be created in the same folder as the `Mixamo` character. The menu item will apply some material fixes on the `Mixamo` model.
+The menu item `Fuse->Setup NavMesh [Agent] Scary Zombie Pack` can only be used when the main `Mixamo` character model is selected. For example, select the `Assets\SetupForFuseCC\Models\DinerShortRoundHead\DinerShortRoundHead.fbx` model in the project view before invoking the menu item. The menu item will automatically generate an `Animator Controller` for the `Mixamo` character that is compatible with the `Scary Zombie Pack` from `Mixamo`. The `Animator Controller` will be created in the same folder as the `Mixamo` character. The menu item will apply some material fixes on the `Mixamo` model.
 
 ![image_8](Setup-For-Fuse-CC/image_8.png)
 
@@ -294,7 +294,7 @@ The menu item `Fuse->Setup NavMesh [Enemy] Scary Zombie Pack` should only be run
 
 #### Setup NavMesh Agents for UFPS
 
-The menu item `Fuse->Setup NavMesh [UFPS Enemy] Scary Zombie Pack` should only be run on a `NavMesh Agent` template. The menu item adds a `Damage Handler` so that the `Zombie` can be damaged by the `UFPS Player`. The menu item will only display if `UFPS` is enabled. The below image has the template enabled only for documentation purposes. `NavMesh Agent` templates should be deactivated to be used properly. 
+The menu item `Fuse->Setup NavMesh [UFPS Enemy] Scary Zombie Pack` should only be run on a `NavMesh Agent` template. For example, select the `NavMeshAgents\Agent - DinerShortRoundHead2` in the scene before invoking the menu item. The menu item adds a `Damage Handler` so that the `Zombie` can be damaged by the `UFPS Player`. The menu item will only display if `UFPS` is enabled. The below image has the template enabled only for documentation purposes. `NavMesh Agent` templates should be deactivated to be used properly. 
 
 ![image_12](Setup-For-Fuse-CC/image_12.png)
 
