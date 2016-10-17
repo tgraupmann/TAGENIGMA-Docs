@@ -403,7 +403,19 @@ At this point, the `RAIN Agents` will cycle between their respective waypoints. 
 Some 3rd party packages have some bug fixes yet to be published.
 
 
-### UFPS
+### UFPS 1.7
+
+`UFPS 1.7` removed the `FallImpactSounds` field from `vp_FPPlayerDamageHandler`.
+
+Comment out the following lines from `MenuSetupPack.cs`.
+
+```
+//playerDamageHandler.FallImpactSounds.Add(AssetDatabase.LoadAssetAtPath<AudioClip>(@"Assets/UFPS/Base/Content/Sounds/Player/FallImpact/FallImpactGeneric01.ogg"));
+//playerDamageHandler.FallImpactSounds.Add(AssetDatabase.LoadAssetAtPath<AudioClip>(@"Assets/UFPS/Base/Content/Sounds/Player/FallImpact/FallImpactGeneric02.ogg"));
+```
+
+
+### UFPS 1.6
 
 UFPS has some bug fixes that have yet to be incorporated into the release version. The following fixes correspond to `UFPS 1.5.2` and `UFPS 1.6`.
 
