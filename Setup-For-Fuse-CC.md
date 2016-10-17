@@ -447,7 +447,7 @@ In `UFPS`, pressing `ESC` exits FPS mode and shows the cursor in the editor. Thi
 			#if UNITY_EDITOR
 				Cursor.SetCursor((value ? InvisibleCursor : VisibleCursor), Vector2.zero, CursorMode.Auto);
 			#endif
-            // running in a build so toggling visibility should work fine
+			// running in a build so toggling visibility should work fine
 			Cursor.visible = !value;
 			Cursor.lockState = (value ? CursorLockMode.Locked : CursorLockMode.None);
 		}
@@ -463,7 +463,7 @@ In `UFPS`, pressing `ESC` exits FPS mode and shows the cursor in the editor. Thi
 
 #### Player Inventory Null Checking
 
-`UFPS` didn't expect some things to be called in edit mode. Here's a fix to add a null check in the player inventory script. Find the `Reset` method on `vp_PlayerInventory`.
+**Fixed in UFPS 1.7.** `UFPS` didn't expect some things to be called in edit mode. Here's a fix to add a null check in the player inventory script. Find the `Reset` method on `vp_PlayerInventory`.
 
 `Assets\UFPS\Base\Scripts\Gameplay\Player\vp_PlayerInventory.cs`
 
@@ -489,7 +489,7 @@ In `UFPS`, pressing `ESC` exits FPS mode and shows the cursor in the editor. Thi
 
 #### Player Inventory Wield Null Checking
 
-Find the `TryWieldNewItem` method on `vp_PlayerInventory`. This adds missing null checks and notice this method uses the legendary `goto`.
+**Fixed in UFPS 1.7.** Find the `TryWieldNewItem` method on `vp_PlayerInventory`. This adds missing null checks and notice this method uses the legendary `goto`.
 
 `Assets\UFPS\Base\Scripts\Gameplay\Player\vp_PlayerInventory.cs`
 
