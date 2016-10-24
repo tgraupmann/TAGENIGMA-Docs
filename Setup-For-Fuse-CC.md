@@ -225,6 +225,33 @@ After hitting `Play`, the scene should display in the `Oculus Rift DK1`, headtra
 ![image_30](Setup-For-Fuse-CC/image_30.png)
 
 
+## Getting Started: Without RAIN and without UFPS
+
+1. Start with a new project.
+
+2. Import the `Setup For Fuse CC` package.
+
+3. Create and save a new scene.
+
+4. Use the Fuse->Setup Navmesh [Waypoint Obstacles] menu item.
+
+You should be prompted to create a "Ground" layer and "Obstacle" tag.
+
+Repeat step, if prompted.
+
+5. Select a Mixamo animation pack like the sample `Assets\SetupForFuseCC\Models\DinerShortRoundHead\DinerShortRoundHead.fbx` model.
+
+The animation pack downloads as a zip. You'll want to extract the zip. And select the model that doesn't have the '@' symbol in the name.
+
+6. Use the `Fuse->Setup Navmesh [Agents] Scary Zombie Pack` menu item.
+
+This will auto create an animation controller and add agents and spawners to the scene.
+
+7. Hit 'Play' and in the Scene View you can see the zombies running around.
+
+8. Without UFPS, you'll have to create your own player/camera rig to run around the map.
+
+
 ## Unity Built-in NavMesh Agents
 ---
 
